@@ -6,6 +6,6 @@ target 'snaplingua-ios' do
   use_frameworks!
 
   # Pods for snaplingua-ios
-  pod 'SwiftyJSON'
+  pod 'SwiftyJSON', ‘3.1.4’
 
 end

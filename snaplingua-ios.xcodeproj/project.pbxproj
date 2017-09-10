@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41333D5A1F64DF4F0077645F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41333D591F64DF4F0077645F /* SwiftyJSON.framework */; };
 		41C8252F1F64C5F500CDFAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */; };
 		41C825341F64C5F500CDFAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C825321F64C5F500CDFAEC /* Main.storyboard */; };
 		41C825361F64C5F500CDFAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C825351F64C5F500CDFAEC /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41333D591F64DF4F0077645F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/snaplingua-ios-bfmxmyzvdhbpqqarnjxppxsjnfvw/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		41C8252B1F64C5F500CDFAEC /* snaplingua-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "snaplingua-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C825331F64C5F500CDFAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41333D5A1F64DF4F0077645F /* SwiftyJSON.framework in Frameworks */,
 				8596D88D4F7F0837ED32C2E8 /* Pods_snaplingua_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +114,7 @@
 		C6D2BC3DE9AA05F4FBD7845A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41333D591F64DF4F0077645F /* SwiftyJSON.framework */,
 				4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */,
 			);
 			name = Frameworks;
@@ -194,13 +198,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-snaplingua-ios-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7BB8AF2E01299ABF22059FAB /* [CP] Embed Pods Frameworks */ = {
@@ -209,9 +216,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -411,6 +421,7 @@
 				41C8253F1F64C5F500CDFAEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

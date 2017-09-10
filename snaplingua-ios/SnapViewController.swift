@@ -71,6 +71,9 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate {
   func capturedImage(image: UIImage) {
     self.endCaptureAnimation()
     
+    let binaryImageData = base64EncodeImage(image)
+    createRequest(with: binaryImageData)
+
     DLog(message: "capturedImage")
   }
   
