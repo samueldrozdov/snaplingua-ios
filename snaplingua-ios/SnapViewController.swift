@@ -14,6 +14,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   @IBOutlet weak var captureButton: UIButton!
   @IBOutlet weak var previewView: UIView!
   @IBOutlet weak var focusAreaView: UIView!
+  @IBOutlet weak var captureActivityIndicatorBackground: UIView!
   @IBOutlet weak var captureActivityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var selectObjectViewContainer: UIView!
   @IBOutlet weak var selectObjectViewControllerBottom: NSLayoutConstraint!
@@ -44,6 +45,8 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
         
     selectObjectViewContainer.layer.cornerRadius = 8
     selectObjectViewControllerBottom.constant = -selectObjectViewContainer.bounds.height
+    
+    captureActivityIndicatorBackground.layer.cornerRadius = 8;
     
     self.selectObjectTableView.delegate = self
     
@@ -86,6 +89,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     UIView.animate(withDuration: 0.3, animations: {
       self.captureButton.layer.opacity = 0
       self.focusAreaView.layer.opacity = 0
+      self.captureActivityIndicatorBackground.layer.opacity = 1
     }) { (true) in
       self.captureActivityIndicator.startAnimating()
     }
@@ -95,6 +99,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     UIView.animate(withDuration: 0.3, animations: {
       self.captureButton.layer.opacity = 1
       self.focusAreaView.layer.opacity = 1
+      self.captureActivityIndicatorBackground.layer.opacity = 0
     }) { (true) in
       self.captureActivityIndicator.stopAnimating()
     }

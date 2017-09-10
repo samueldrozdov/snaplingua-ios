@@ -336,9 +336,17 @@
                                             <constraint firstItem="YZ1-Jl-O68" firstAttribute="leading" secondItem="g8n-UX-dPA" secondAttribute="leading" id="vbO-iF-1VD"/>
                                         </constraints>
                                     </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYJ-87-2WQ">
+                                        <rect key="frame" x="157" y="303" width="60" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="uOm-OT-HIA"/>
+                                            <constraint firstAttribute="height" constant="60" id="viA-mp-6yC"/>
+                                        </constraints>
+                                    </view>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3NA-eq-EhW">
                                         <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                        <color key="color" red="1" green="0.72156862745098038" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>
@@ -346,6 +354,7 @@
                                     <constraint firstItem="jpg-Ef-OD6" firstAttribute="centerX" secondItem="Tmq-PL-aGC" secondAttribute="centerX" id="8FP-G0-2Pq"/>
                                     <constraint firstItem="3NA-eq-EhW" firstAttribute="centerX" secondItem="jpg-Ef-OD6" secondAttribute="centerX" id="A86-FQ-WXi"/>
                                     <constraint firstItem="3NA-eq-EhW" firstAttribute="centerY" secondItem="jpg-Ef-OD6" secondAttribute="centerY" id="Cw1-tr-U3P"/>
+                                    <constraint firstItem="dYJ-87-2WQ" firstAttribute="centerX" secondItem="jpg-Ef-OD6" secondAttribute="centerX" id="Dti-Qd-gRL"/>
                                     <constraint firstItem="KrR-YM-eEM" firstAttribute="top" secondItem="Tmq-PL-aGC" secondAttribute="top" constant="24" id="Fgx-pn-vRh"/>
                                     <constraint firstAttribute="trailing" secondItem="g8n-UX-dPA" secondAttribute="trailing" constant="8" id="HhH-n5-oB0"/>
                                     <constraint firstItem="3gS-QC-Ql3" firstAttribute="centerX" secondItem="Tmq-PL-aGC" secondAttribute="centerX" id="IS6-2a-Rjr"/>
@@ -353,6 +362,7 @@
                                     <constraint firstItem="KrR-YM-eEM" firstAttribute="leading" secondItem="Tmq-PL-aGC" secondAttribute="leading" constant="16" id="dXk-O9-N5S"/>
                                     <constraint firstAttribute="bottom" secondItem="3gS-QC-Ql3" secondAttribute="bottom" constant="30" id="myh-sd-xpK"/>
                                     <constraint firstAttribute="bottom" secondItem="g8n-UX-dPA" secondAttribute="bottom" constant="-8" id="r2P-XO-KVu"/>
+                                    <constraint firstItem="dYJ-87-2WQ" firstAttribute="centerY" secondItem="jpg-Ef-OD6" secondAttribute="centerY" id="vym-UW-KN9"/>
                                     <constraint firstItem="g8n-UX-dPA" firstAttribute="leading" secondItem="Tmq-PL-aGC" secondAttribute="leading" constant="8" id="xf3-9X-AuG"/>
                                 </constraints>
                             </view>
@@ -367,6 +377,7 @@
                     </view>
                     <connections>
                         <outlet property="captureActivityIndicator" destination="3NA-eq-EhW" id="XcQ-9D-62N"/>
+                        <outlet property="captureActivityIndicatorBackground" destination="dYJ-87-2WQ" id="hJ0-p7-fy7"/>
                         <outlet property="captureButton" destination="3gS-QC-Ql3" id="3Gh-5G-cJH"/>
                         <outlet property="focusAreaView" destination="jpg-Ef-OD6" id="aRm-7M-BwZ"/>
                         <outlet property="previewView" destination="Tmq-PL-aGC" id="HhF-b0-JLz"/>
