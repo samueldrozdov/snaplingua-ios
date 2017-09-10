@@ -87,12 +87,15 @@ class GVImageRequestManager: NSObject {
   }
 
   func runRequestOnBackgroundThread(_ request: URLRequest) {
-    // run the request
+    DLog(message: "making request...")
     
     let session = URLSession.shared
     let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
       guard let data = data, error == nil else {
         print(error?.localizedDescription ?? "")
+        DispatchQueue.main.async(execute: {
+          self.delegate?.requestCompleted(self, responseStatus: GVImageResponseStatus.RequestFailed, labels: [])
+        })
         return
       }
       
@@ -103,11 +106,10 @@ class GVImageRequestManager: NSObject {
   }
 
   func analyzeResults(_ dataToParse: Data) {
+    DLog(message: "analyzing results...")
     
-    // Update UI on the main thread
     DispatchQueue.main.async(execute: {
       
-      // Use SwiftyJSON to parse results
       let json = JSON(data: dataToParse)
       let errorObj: JSON = json["error"]
       
@@ -120,10 +122,8 @@ class GVImageRequestManager: NSObject {
         let validLabels = NSMutableArray()
         
         for label in labels {
-          let labelScore = label.1["score"]
-          if labelScore > 0.75 {
-            validLabels.add(label.1["description"])
-          }
+          let labelName = label.1["description"].string
+          validLabels.add(labelName!)
         }
         
         if validLabels.count > 0 {

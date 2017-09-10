@@ -30,6 +30,8 @@ class ObjectViewController: UIViewController {
 
 class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
   
+  var words = NSArray()
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
@@ -37,16 +39,24 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     self.dataSource = self
     
     self.separatorInset = .zero
+    
+    words = SLUserDefaultsManager().getPreviousWords()
+    self.reloadData()
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return words.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = self.dequeueReusableCell(withIdentifier: "ObjectCell", for:indexPath)
-        
+    let cell = self.dequeueReusableCell(withIdentifier: "ObjectCell", for:indexPath) as! ObjectTableViewCell
+    
+    let word = words[indexPath.row] as! NSDictionary
+    
+    cell.wordImageView?.image = UIImage(data:(word["image"] as! Data), scale:1.0)
+    cell.wordLabel?.text = word["word"] as? String
+    
     return cell
   }
   
@@ -60,6 +70,9 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
 }
 
 class ObjectTableViewCell: UITableViewCell {
+  
+  @IBOutlet weak var wordLabel: UILabel!
+  @IBOutlet weak var wordImageView: UIImageView!
   
   override func awakeFromNib() {
     super.awakeFromNib()

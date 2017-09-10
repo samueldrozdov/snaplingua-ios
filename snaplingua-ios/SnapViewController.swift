@@ -15,12 +15,17 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   @IBOutlet weak var previewView: UIView!
   @IBOutlet weak var focusAreaView: UIView!
   @IBOutlet weak var captureActivityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var selectObjectViewContainer: UIView!
+  @IBOutlet weak var selectObjectViewControllerBottom: NSLayoutConstraint!
+  @IBOutlet weak var selectObjectTableView: SelectObjectTableView!
   
   var captureSession: AVCaptureSession?
   var videoPreviewLayer: AVCaptureVideoPreviewLayer?
   var capturePhotoOutput: AVCapturePhotoOutput?
   
   var imageRequestManager: GVImageRequestManager?
+  var capturedImage: UIImage?
+  var capturedLabels: NSArray?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,13 +41,31 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     
     focusAreaView.layer.borderWidth = 1
     focusAreaView.layer.borderColor = UIColor.init(white: 1.0, alpha: 0.3).cgColor
+    
+    selectObjectViewContainer.layer.cornerRadius = 8
+    selectObjectViewControllerBottom.constant = -selectObjectViewContainer.bounds.height
         
     self.enableCamera()
+  }
+  
+  func hideSelectObjectView() {
+    UIView.animate(withDuration: 0.3, animations: {
+      self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
+    }) { (true) in
+    }
+  }
+  
+  func showSelectObjectView() {
+    UIView.animate(withDuration: 0.3, animations: {
+      self.selectObjectViewControllerBottom.constant = -8
+    }) { (true) in
+    }
   }
   
   func startCaptureAnimation() {
     UIView.animate(withDuration: 0.3, animations: {
       self.captureButton.layer.opacity = 0
+      self.focusAreaView.layer.opacity = 0
     }) { (true) in
       self.captureActivityIndicator.startAnimating()
     }
@@ -51,6 +74,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   func endCaptureAnimation() {
     UIView.animate(withDuration: 0.3, animations: {
       self.captureButton.layer.opacity = 1
+      self.focusAreaView.layer.opacity = 1
     }) { (true) in
       self.captureActivityIndicator.stopAnimating()
     }
@@ -85,13 +109,15 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
       alert.show(self, sender: self)
     }
     else if responseStatus == GVImageResponseStatus.RequestSucceeded {
-      print(labels)
+      capturedLabels = labels
+      selectObjectTableView.reloadWithItems(items: capturedLabels!, image: capturedImage!)
+      self.showSelectObjectView()
     }
-    
   }
-
   
   func capturedImage(image: UIImage) {
+    
+    capturedImage = image
     
     let binaryImageData = imageRequestManager?.base64EncodeImage(image)
     imageRequestManager?.createRequest(with: binaryImageData!)
@@ -145,3 +171,48 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     }
   }
 }
+
+class SelectObjectTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+  
+  var items: NSArray = []
+  var selectedLabel: String  = ""
+  var image: UIImage = UIImage()
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    items = NSArray()
+    
+    self.delegate = self
+    self.dataSource = self
+
+    self.tableFooterView = UIView()
+  }
+  
+  public func reloadWithItems(items: NSArray, image: UIImage) {
+    self.items = items
+    self.image = image
+    self.reloadData()
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return items.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = self.dequeueReusableCell(withIdentifier: "SelectObjectCell", for:indexPath)
+    
+    cell.textLabel?.text = items[indexPath.row] as? String
+    
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    let cell = self.cellForRow(at: indexPath)!
+    let word = cell.textLabel?.text!
+    SLUserDefaultsManager().addImageWithWord(word: word!, image: image)
+  }
+}
+
+
