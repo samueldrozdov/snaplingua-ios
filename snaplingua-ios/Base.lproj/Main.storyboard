@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="84" id="OeO-jD-v4c" customClass="ObjectTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="84" id="OeO-jD-v4c" customClass="ObjectTableViewCell" customModule="snaplingua_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OeO-jD-v4c" id="3k5-c6-ARt">
@@ -93,6 +93,7 @@
                                 </state>
                                 <connections>
                                     <action selector="snapButtonPressed:" destination="uEy-vT-RRG" eventType="touchUpInside" id="Kmz-kt-Pzk"/>
+                                    <segue destination="Zt5-dZ-oTO" kind="presentation" id="8DS-oG-AyT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,6 +115,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAx-Pa-abB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="81.409295352323838"/>
+        </scene>
+        <!--Snap View Controller-->
+        <scene sceneID="wCX-dy-hFR">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Zt5-dZ-oTO" customClass="SnapViewController" customModule="snaplingua_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Fb-tx-UAp"/>
+                        <viewControllerLayoutGuide type="bottom" id="mdA-lb-2Sd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zqb-KE-JEp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmq-PL-aGC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gS-QC-Ql3">
+                                        <rect key="frame" x="151" y="565" width="72" height="72"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="1OC-gw-fuO"/>
+                                            <constraint firstAttribute="height" constant="72" id="OJh-Ah-qcI"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedCaptureButton:" destination="Zt5-dZ-oTO" eventType="touchUpInside" id="ASH-mE-qYO"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpg-Ef-OD6">
+                                        <rect key="frame" x="107" y="253" width="160" height="160"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="Eiq-cM-eAd"/>
+                                            <constraint firstAttribute="width" constant="160" id="N23-xj-5YK"/>
+                                        </constraints>
+                                    </view>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3NA-eq-EhW">
+                                        <rect key="frame" x="177" y="591" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrR-YM-eEM">
+                                        <rect key="frame" x="16" y="24" width="48" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedCancelButton:" destination="Zt5-dZ-oTO" eventType="touchUpInside" id="j3W-aB-568"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3NA-eq-EhW" firstAttribute="top" secondItem="3gS-QC-Ql3" secondAttribute="bottom" constant="-46" id="5Vj-oP-cg2"/>
+                                    <constraint firstItem="jpg-Ef-OD6" firstAttribute="centerX" secondItem="Tmq-PL-aGC" secondAttribute="centerX" id="8FP-G0-2Pq"/>
+                                    <constraint firstItem="KrR-YM-eEM" firstAttribute="top" secondItem="Tmq-PL-aGC" secondAttribute="top" constant="24" id="Fgx-pn-vRh"/>
+                                    <constraint firstItem="3gS-QC-Ql3" firstAttribute="centerX" secondItem="Tmq-PL-aGC" secondAttribute="centerX" id="IS6-2a-Rjr"/>
+                                    <constraint firstItem="jpg-Ef-OD6" firstAttribute="centerY" secondItem="Tmq-PL-aGC" secondAttribute="centerY" id="Qc6-wo-KcE"/>
+                                    <constraint firstItem="KrR-YM-eEM" firstAttribute="leading" secondItem="Tmq-PL-aGC" secondAttribute="leading" constant="16" id="dXk-O9-N5S"/>
+                                    <constraint firstAttribute="bottom" secondItem="3gS-QC-Ql3" secondAttribute="bottom" constant="30" id="myh-sd-xpK"/>
+                                    <constraint firstItem="3NA-eq-EhW" firstAttribute="leading" secondItem="3gS-QC-Ql3" secondAttribute="trailing" constant="-46" id="oW5-qp-aIO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tmq-PL-aGC" secondAttribute="trailing" id="DPA-H9-TU3"/>
+                            <constraint firstItem="Tmq-PL-aGC" firstAttribute="leading" secondItem="zqb-KE-JEp" secondAttribute="leading" id="Zl6-H8-HKk"/>
+                            <constraint firstItem="mdA-lb-2Sd" firstAttribute="top" secondItem="Tmq-PL-aGC" secondAttribute="bottom" id="fKg-IG-i6Y"/>
+                            <constraint firstItem="Tmq-PL-aGC" firstAttribute="top" secondItem="zqb-KE-JEp" secondAttribute="top" id="sVe-3m-ya1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureActivityIndicator" destination="3NA-eq-EhW" id="XcQ-9D-62N"/>
+                        <outlet property="captureButton" destination="3gS-QC-Ql3" id="3Gh-5G-cJH"/>
+                        <outlet property="focusAreaView" destination="jpg-Ef-OD6" id="aRm-7M-BwZ"/>
+                        <outlet property="previewView" destination="Tmq-PL-aGC" id="HhF-b0-JLz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cp4-EQ-1td" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="81"/>
         </scene>
     </scenes>
 </document>
