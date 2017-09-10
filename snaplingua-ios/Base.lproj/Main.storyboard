@@ -189,7 +189,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Choose Language" id="dGL-Ae-jjc">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="fYr-lv-hD2"/>
-                        <barButtonItem key="leftBarButtonItem" id="TYF-g0-QNI">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="TYF-g0-QNI">
                             <connections>
                                 <action selector="pressedCancel:" destination="kXu-df-Dpk" id="eB8-S3-t0S"/>
                             </connections>
