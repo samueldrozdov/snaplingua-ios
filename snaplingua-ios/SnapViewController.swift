@@ -63,18 +63,22 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   }
   
   func hideSelectObjectView() {
-    self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
-    UIView.animate(withDuration: 0.3, animations: {
-      self.selectObjectViewContainer.layoutIfNeeded()
-    }) { (true) in
+    DispatchQueue.main.async {
+      self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
+      UIView.animate(withDuration: 0.3, animations: {
+        self.selectObjectViewContainer.layoutIfNeeded()
+      }) { (true) in
+      }
     }
   }
   
   func showSelectObjectView() {
-    self.selectObjectViewControllerBottom.constant = -8
-    UIView.animate(withDuration: 0.3, animations: {
-      self.selectObjectViewContainer.layoutIfNeeded()
-    }) { (true) in
+    DispatchQueue.main.async {
+      self.selectObjectViewControllerBottom.constant = -8
+      UIView.animate(withDuration: 0.3, animations: {
+        self.selectObjectViewContainer.layoutIfNeeded()
+      }) { (true) in
+      }
     }
   }
   
@@ -132,6 +136,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   }
   
   func capturedImage(image: UIImage) {
+    captureSession?.stopRunning()
     
     capturedImage = image
     
