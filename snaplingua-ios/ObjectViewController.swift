@@ -8,9 +8,13 @@
 
 import UIKit
 
-class ObjectViewController: UIViewController {
+class ObjectViewController: UIViewController, UITableViewDelegate {
   
   @IBOutlet weak var snapButton: UIButton!
+  @IBOutlet weak var objectListTableView: ObjectListTableView!
+  
+  var selectedWord: String = ""
+  var selectedImage: UIImage = UIImage()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,11 +24,42 @@ class ObjectViewController: UIViewController {
     snapButton.layer.shadowOpacity = 0.3
     snapButton.layer.shadowRadius = snapButton.bounds.width / 2
     snapButton.layer.shadowPath = UIBezierPath(rect: snapButton.bounds).cgPath
-
+        
+    self.objectListTableView.delegate = self
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    self.objectListTableView.reload()
   }
 
   @IBAction func snapButtonPressed(_ sender: UIButton) {
-    DLog(message: "pressed button")
+    DLog(message: "pressed snap Button")
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let cell: ObjectTableViewCell = objectListTableView.cellForRow(at: indexPath) as! ObjectTableViewCell
+    selectedImage = cell.wordImageView.image!
+    selectedWord = cell.wordLabel.text!
+    performSegue(withIdentifier: "ShowObjectDetail", sender: nil)
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 120
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowObjectDetail" {
+      let viewController: ObjectDetailViewController = segue.destination as! ObjectDetailViewController
+      viewController.wordImage = selectedImage
+      viewController.title = selectedWord
+      
+      let backItem = UIBarButtonItem()
+      backItem.title = "Back"
+      navigationItem.backBarButtonItem = backItem
+
+    }
   }
 }
 
@@ -40,6 +75,10 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     
     self.separatorInset = .zero
     
+    self.reload()
+  }
+  
+  func reload() {
     words = SLUserDefaultsManager().getPreviousWords()
     self.reloadData()
   }
@@ -61,11 +100,7 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 84
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("You tapped cell number \(indexPath.row).")
+    return 120
   }
 }
 

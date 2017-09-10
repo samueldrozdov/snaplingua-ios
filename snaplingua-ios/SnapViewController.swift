@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCImageRequestManagerDelegate {
+class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCImageRequestManagerDelegate, UITableViewDelegate {
   
   @IBOutlet weak var captureButton: UIButton!
   @IBOutlet weak var previewView: UIView!
@@ -41,23 +41,41 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     
     focusAreaView.layer.borderWidth = 1
     focusAreaView.layer.borderColor = UIColor.init(white: 1.0, alpha: 0.3).cgColor
-    
+        
     selectObjectViewContainer.layer.cornerRadius = 8
     selectObjectViewControllerBottom.constant = -selectObjectViewContainer.bounds.height
-        
+    
+    self.selectObjectTableView.delegate = self
+    
     self.enableCamera()
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    let cell = selectObjectTableView.cellForRow(at: indexPath)!
+    let word = cell.textLabel?.text!
+    SLUserDefaultsManager().addImageWithWord(word: word!, image: capturedImage!)
+    self.dismiss(animated: true, completion: nil)
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 60
+  }
+  
   func hideSelectObjectView() {
+    self.selectObjectViewContainer.layoutIfNeeded()
     UIView.animate(withDuration: 0.3, animations: {
       self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
+      self.selectObjectViewContainer.layoutIfNeeded()
     }) { (true) in
     }
   }
   
   func showSelectObjectView() {
+    self.selectObjectViewContainer.layoutIfNeeded()
     UIView.animate(withDuration: 0.3, animations: {
       self.selectObjectViewControllerBottom.constant = -8
+      self.selectObjectViewContainer.layoutIfNeeded()
     }) { (true) in
     }
   }
@@ -110,7 +128,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     }
     else if responseStatus == GVImageResponseStatus.RequestSucceeded {
       capturedLabels = labels
-      selectObjectTableView.reloadWithItems(items: capturedLabels!, image: capturedImage!)
+      selectObjectTableView.reloadWithItems(items: capturedLabels!)
       self.showSelectObjectView()
     }
   }
@@ -176,7 +194,6 @@ class SelectObjectTableView: UITableView, UITableViewDelegate, UITableViewDataSo
   
   var items: NSArray = []
   var selectedLabel: String  = ""
-  var image: UIImage = UIImage()
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -188,9 +205,8 @@ class SelectObjectTableView: UITableView, UITableViewDelegate, UITableViewDataSo
     self.tableFooterView = UIView()
   }
   
-  public func reloadWithItems(items: NSArray, image: UIImage) {
+  public func reloadWithItems(items: NSArray) {
     self.items = items
-    self.image = image
     self.reloadData()
   }
   
@@ -206,12 +222,9 @@ class SelectObjectTableView: UITableView, UITableViewDelegate, UITableViewDataSo
     
     return cell
   }
-
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-    let cell = self.cellForRow(at: indexPath)!
-    let word = cell.textLabel?.text!
-    SLUserDefaultsManager().addImageWithWord(word: word!, image: image)
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 60
   }
 }
 

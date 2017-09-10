@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41333D5A1F64DF4F0077645F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41333D591F64DF4F0077645F /* SwiftyJSON.framework */; };
 		41333D5C1F6510920077645F /* SLUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41333D5B1F6510920077645F /* SLUserDefaultsManager.swift */; };
+		4151D4D61F651ADD00702202 /* ObjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151D4D51F651ADD00702202 /* ObjectDetailViewController.swift */; };
 		41C8252F1F64C5F500CDFAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */; };
 		41C825341F64C5F500CDFAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C825321F64C5F500CDFAEC /* Main.storyboard */; };
 		41C825361F64C5F500CDFAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C825351F64C5F500CDFAEC /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		41333D591F64DF4F0077645F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/snaplingua-ios-bfmxmyzvdhbpqqarnjxppxsjnfvw/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		41333D5B1F6510920077645F /* SLUserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLUserDefaultsManager.swift; sourceTree = "<group>"; };
+		4151D4D51F651ADD00702202 /* ObjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDetailViewController.swift; sourceTree = "<group>"; };
 		41C8252B1F64C5F500CDFAEC /* snaplingua-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "snaplingua-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C825331F64C5F500CDFAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				41C825491F64CDDE00CDFAEC /* Managers */,
 				41C825451F64C79900CDFAEC /* ObjectViewController.swift */,
 				41C825471F64CC7600CDFAEC /* SnapViewController.swift */,
+				4151D4D51F651ADD00702202 /* ObjectDetailViewController.swift */,
 				41C825321F64C5F500CDFAEC /* Main.storyboard */,
 				41C825351F64C5F500CDFAEC /* Assets.xcassets */,
 				41C825371F64C5F500CDFAEC /* LaunchScreen.storyboard */,
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4151D4D61F651ADD00702202 /* ObjectDetailViewController.swift in Sources */,
 				41C825481F64CC7600CDFAEC /* SnapViewController.swift in Sources */,
 				41C825461F64C79900CDFAEC /* ObjectViewController.swift in Sources */,
 				41C825441F64C62800CDFAEC /* SLNotifications.swift in Sources */,
