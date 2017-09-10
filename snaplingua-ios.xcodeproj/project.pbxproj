@@ -16,6 +16,7 @@
 		41C825461F64C79900CDFAEC /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825451F64C79900CDFAEC /* ObjectViewController.swift */; };
 		41C825481F64CC7600CDFAEC /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825471F64CC7600CDFAEC /* SnapViewController.swift */; };
 		41C8254B1F64CDFF00CDFAEC /* GVRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8254A1F64CDFF00CDFAEC /* GVRequestManager.swift */; };
+		8596D88D4F7F0837ED32C2E8 /* Pods_snaplingua_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		41C825451F64C79900CDFAEC /* ObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 		41C825471F64CC7600CDFAEC /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		41C8254A1F64CDFF00CDFAEC /* GVRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GVRequestManager.swift; sourceTree = "<group>"; };
+		4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snaplingua_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77CC29634B946DE10D8AE9B /* Pods-snaplingua-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D30FA217A0E8875322F9B878 /* Pods-snaplingua-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8596D88D4F7F0837ED32C2E8 /* Pods_snaplingua_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				41C8252D1F64C5F500CDFAEC /* snaplingua-ios */,
 				41C8252C1F64C5F500CDFAEC /* Products */,
+				84439E6917D6E56524FD5772 /* Pods */,
+				C6D2BC3DE9AA05F4FBD7845A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +99,23 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		84439E6917D6E56524FD5772 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B77CC29634B946DE10D8AE9B /* Pods-snaplingua-ios.debug.xcconfig */,
+				D30FA217A0E8875322F9B878 /* Pods-snaplingua-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C6D2BC3DE9AA05F4FBD7845A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41C8253D1F64C5F500CDFAEC /* Build configuration list for PBXNativeTarget "snaplingua-ios" */;
 			buildPhases = (
+				5C275286C6F31BFF9F4EFA09 /* [CP] Check Pods Manifest.lock */,
 				41C825271F64C5F500CDFAEC /* Sources */,
 				41C825281F64C5F500CDFAEC /* Frameworks */,
 				41C825291F64C5F500CDFAEC /* Resources */,
+				7BB8AF2E01299ABF22059FAB /* [CP] Embed Pods Frameworks */,
+				97C40FFFB5AD677D98F0E7D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +186,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C275286C6F31BFF9F4EFA09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BB8AF2E01299ABF22059FAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97C40FFFB5AD677D98F0E7D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41C825271F64C5F500CDFAEC /* Sources */ = {
@@ -291,6 +366,7 @@
 		};
 		41C8253E1F64C5F500CDFAEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77CC29634B946DE10D8AE9B /* Pods-snaplingua-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8EV5JNYZS7;
@@ -304,6 +380,7 @@
 		};
 		41C8253F1F64C5F500CDFAEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D30FA217A0E8875322F9B878 /* Pods-snaplingua-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8EV5JNYZS7;
