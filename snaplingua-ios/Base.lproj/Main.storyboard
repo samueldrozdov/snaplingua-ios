@@ -218,19 +218,36 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oi0-vL-Tc5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBX-NS-ZfI">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="E85-yx-JKP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="LISTEN">
+                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedListen:" destination="7JV-ji-OLs" eventType="touchUpInside" id="MX2-BH-cDw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Oi0-vL-Tc5" secondAttribute="trailing" id="83O-PP-e51"/>
+                            <constraint firstItem="lBX-NS-ZfI" firstAttribute="leading" secondItem="uiT-ME-E5r" secondAttribute="leading" id="e2l-DY-Rw0"/>
+                            <constraint firstAttribute="trailing" secondItem="lBX-NS-ZfI" secondAttribute="trailing" id="hOj-En-aOo"/>
                             <constraint firstItem="4v2-oP-4Km" firstAttribute="top" secondItem="Oi0-vL-Tc5" secondAttribute="bottom" id="jAh-Oi-EQD"/>
                             <constraint firstItem="Oi0-vL-Tc5" firstAttribute="top" secondItem="uiT-ME-E5r" secondAttribute="top" id="kwR-Z5-nBF"/>
+                            <constraint firstItem="4v2-oP-4Km" firstAttribute="top" secondItem="lBX-NS-ZfI" secondAttribute="bottom" id="mSo-Xq-1Yv"/>
                             <constraint firstItem="Oi0-vL-Tc5" firstAttribute="leading" secondItem="uiT-ME-E5r" secondAttribute="leading" id="yQC-6t-Vtr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Word" id="QvO-S6-e2i">
-                        <barButtonItem key="rightBarButtonItem" title="Listen" id="wMm-am-BKK">
+                        <barButtonItem key="rightBarButtonItem" title="Show" id="wMm-am-BKK">
                             <connections>
-                                <action selector="pressedListen:" destination="7JV-ji-OLs" id="qai-1i-Zxj"/>
+                                <action selector="pressedShow:" destination="7JV-ji-OLs" id="zQK-m6-8HO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -50,8 +50,10 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
     let cell: ObjectTableViewCell = objectListTableView.cellForRow(at: indexPath) as! ObjectTableViewCell
     selectedImage = cell.wordImageView.image!
     selectedWord = cell.wordLabel.text!
-    let d = objectListTableView.words[indexPath.row] as! NSDictionary
-    selectedWordOrig = (d["word"] as? String)!
+    
+    let word = objectListTableView.words[indexPath.row] as! NSDictionary
+    selectedWordOrig = (word["word"] as? String)!
+    DLog(message: selectedWordOrig)
     performSegue(withIdentifier: "ShowObjectDetail", sender: nil)
   }
   
@@ -64,6 +66,7 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
       let viewController: ObjectDetailViewController = segue.destination as! ObjectDetailViewController
       viewController.wordImage = selectedImage
       viewController.wordTranslate = selectedWord
+      viewController.wordOrig = selectedWordOrig
       viewController.title = selectedWord
       
       let backItem = UIBarButtonItem()

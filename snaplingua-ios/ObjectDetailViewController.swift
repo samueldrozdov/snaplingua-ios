@@ -21,7 +21,17 @@ class ObjectDetailViewController: UIViewController {
     self.wordImageView.image = wordImage
   }
   
-  @IBAction func pressedListen(_ sender: UIBarButtonItem) {
+  @IBAction func pressedListen(_ sender: Any) {
+    speak()
+  }
+  
+  @IBAction func pressedShow(_ sender: UIBarButtonItem) {
+    let alert = UIAlertController(title: wordOrig, message: "", preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "Got it", style: UIAlertActionStyle.default, handler: nil))
+    self.present(alert, animated: true, completion: nil)
+  }
+  
+  func speak() {
     let utterance = AVSpeechUtterance(string: wordTranslate)
     let languageCodeApple = languageCodesApple[SLUserDefaultsManager.shared.getLanguageIndex()]
     utterance.voice = AVSpeechSynthesisVoice(language: languageCodeApple)
