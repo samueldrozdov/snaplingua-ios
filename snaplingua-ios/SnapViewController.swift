@@ -54,7 +54,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     
     let cell = selectObjectTableView.cellForRow(at: indexPath)!
     let word = cell.textLabel?.text!
-    SLUserDefaultsManager().addImageWithWord(word: word!, image: capturedImage!)
+    SLUserDefaultsManager.shared.addImageWithWord(word: word!, image: capturedImage!)
     self.dismiss(animated: true, completion: nil)
   }
   
@@ -63,18 +63,16 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   }
   
   func hideSelectObjectView() {
-    self.selectObjectViewContainer.layoutIfNeeded()
+    self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
     UIView.animate(withDuration: 0.3, animations: {
-      self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
       self.selectObjectViewContainer.layoutIfNeeded()
     }) { (true) in
     }
   }
   
   func showSelectObjectView() {
-    self.selectObjectViewContainer.layoutIfNeeded()
+    self.selectObjectViewControllerBottom.constant = -8
     UIView.animate(withDuration: 0.3, animations: {
-      self.selectObjectViewControllerBottom.constant = -8
       self.selectObjectViewContainer.layoutIfNeeded()
     }) { (true) in
     }

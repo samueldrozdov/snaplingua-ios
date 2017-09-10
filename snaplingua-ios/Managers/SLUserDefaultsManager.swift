@@ -10,8 +10,11 @@ import UIKit
 
 let WORDS_KEY = "wordsKeys"
 
-class SLUserDefaultsManager: NSObject {
+final class SLUserDefaultsManager: NSObject {
 
+  static let shared = SLUserDefaultsManager()
+  private override init() { }
+  
   func addImageWithWord(word: String, image: UIImage) {
     let prevWords = getPreviousWords() as NSMutableArray
     
@@ -27,7 +30,10 @@ class SLUserDefaultsManager: NSObject {
   }
 
   func getPreviousWords() -> NSMutableArray {
-    let words = NSMutableArray(array: UserDefaults.standard.object(forKey: WORDS_KEY) as! NSArray)
+    var words = NSMutableArray()
+    if (UserDefaults.standard.object(forKey: WORDS_KEY) != nil) {
+      words = NSMutableArray(array: UserDefaults.standard.object(forKey: WORDS_KEY) as! NSArray)
+    }
     return words
   }
 

@@ -79,7 +79,7 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
   }
   
   func reload() {
-    words = SLUserDefaultsManager().getPreviousWords()
+    words = SLUserDefaultsManager.shared.getPreviousWords()
     self.reloadData()
   }
   
