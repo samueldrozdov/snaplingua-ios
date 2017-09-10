@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ROGoogleTranslate
 
 class ObjectViewController: UIViewController, UITableViewDelegate {
   
@@ -94,7 +95,20 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     let word = words[indexPath.row] as! NSDictionary
     
     cell.wordImageView?.image = UIImage(data:(word["image"] as! Data), scale:1.0)
-    cell.wordLabel?.text = word["word"] as? String
+    
+    let params = ROGoogleTranslateParams(source: "en",
+                                         target: "ru",
+                                         text: (word["word"] as? String)!)
+    
+    
+    let translator = ROGoogleTranslate()
+    translator.apiKey = GV_IMAGE_API_KEY
+    
+    translator.translate(params: params) { (result) in
+      DispatchQueue.main.async {
+        cell.wordLabel?.text = result
+      }
+    }
     
     return cell
   }
