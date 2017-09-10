@@ -8,10 +8,10 @@
 
 import UIKit
 
-let languageCodes: [String] = ["es", "ru", "sv", "ja", "el"]
-let languageNames: [String] = ["Spanish", "Russian", "Swedish", "Japanese", "Greek"]
-let languageFlags: [String] = ["🇪🇸", "🇷🇺", "🇸🇪", "🇯🇵", "🇬🇷"]
-let languageCodesApple: [String] = ["es-ES", "ru-RU", "sv-SE", "ja-JP", "el-GR"]
+let languageCodes: [String] = ["es", "ru", "sv", "ja", "el", "fr", "iw"]
+let languageNames: [String] = ["Spanish", "Russian", "Swedish", "Japanese", "Greek", "French", "Hebrew"]
+let languageFlags: [String] = ["🇪🇸", "🇷🇺", "🇸🇪", "🇯🇵", "🇬🇷", "🇫🇷", "🇮🇱"]
+let languageCodesApple: [String] = ["es-ES", "ru-RU", "sv-SE", "ja-JP", "el-GR", "fr-FR", "he-IL"]
 
 
 class LanuagePickerViewController: UIViewController, UITableViewDelegate {
