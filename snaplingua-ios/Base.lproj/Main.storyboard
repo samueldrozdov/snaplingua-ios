@@ -10,6 +10,22 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
+        <scene sceneID="7ir-rt-Y0Y">
+            <objects>
+                <navigationController id="ZrV-6Y-6Fp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Uy-y2-jbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kXu-df-Dpk" kind="relationship" relationship="rootViewController" id="ZeP-fw-P7Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Tp-YN-G1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="-615"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="IUh-2t-TUV">
             <objects>
                 <navigationController id="Fcy-k9-4S2" sceneMemberID="viewController">
@@ -41,23 +57,23 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="120" id="OeO-jD-v4c" customClass="ObjectTableViewCell" customModule="snaplingua_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="150" id="OeO-jD-v4c" customClass="ObjectTableViewCell" customModule="snaplingua_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OeO-jD-v4c" id="3k5-c6-ARt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9o-yU-sMQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlI-4Y-hQg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6I-Xz-5CA">
-                                                    <rect key="frame" x="92.5" y="41.5" width="190.5" height="38.5"/>
+                                                    <rect key="frame" x="92.5" y="55.5" width="190.5" height="38.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -84,15 +100,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfX-4g-ltq">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfX-4g-ltq">
                                 <rect key="frame" x="279" y="571" width="72" height="72"/>
                                 <color key="backgroundColor" red="1" green="0.76752069997986883" blue="0.15108245449405677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="50T-VE-aHE"/>
                                     <constraint firstAttribute="width" constant="72" id="Wej-VO-9w6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
-                                <state key="normal" title="+">
+                                <state key="normal" image="icon-camera">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -111,7 +126,13 @@
                             <constraint firstItem="ZqU-5r-ZY4" firstAttribute="leading" secondItem="mtn-5V-ryb" secondAttribute="leading" id="fWP-Jj-fk5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SnapLingua" id="403-cN-Is7"/>
+                    <navigationItem key="navigationItem" title="SnapLingua" id="403-cN-Is7">
+                        <barButtonItem key="leftBarButtonItem" title="🇺🇸" id="z1F-Ap-yzI">
+                            <connections>
+                                <segue destination="ZrV-6Y-6Fp" kind="presentation" id="2jV-e4-r2t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="objectListTableView" destination="ZqU-5r-ZY4" id="Sk7-G9-k9X"/>
                         <outlet property="snapButton" destination="KfX-4g-ltq" id="D8x-By-SWw"/>
@@ -121,6 +142,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAx-Pa-abB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="81.409295352323838"/>
+        </scene>
+        <!--Choose Language-->
+        <scene sceneID="IWU-9V-POR">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kXu-df-Dpk" customClass="LanuagePickerViewController" customModule="snaplingua_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LVx-WY-azC"/>
+                        <viewControllerLayoutGuide type="bottom" id="rWG-Vt-O2f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rpd-fj-V2P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ak-fJ-KF3" customClass="LanguagePickerTableView" customModule="snaplingua_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LanguageCell" textLabel="qoS-x9-bzJ" style="IBUITableViewCellStyleDefault" id="M1P-Mk-nVa">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M1P-Mk-nVa" id="0DK-Mu-xkt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="🇺🇸 Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qoS-x9-bzJ">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Ak-fJ-KF3" secondAttribute="trailing" id="KXi-oo-WG3"/>
+                            <constraint firstItem="6Ak-fJ-KF3" firstAttribute="top" secondItem="LVx-WY-azC" secondAttribute="bottom" id="RoC-Bf-11I"/>
+                            <constraint firstItem="rWG-Vt-O2f" firstAttribute="top" secondItem="6Ak-fJ-KF3" secondAttribute="bottom" id="VQk-qk-gGf"/>
+                            <constraint firstItem="6Ak-fJ-KF3" firstAttribute="leading" secondItem="rpd-fj-V2P" secondAttribute="leading" id="bvd-na-pLn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Language" id="dGL-Ae-jjc">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="fYr-lv-hD2"/>
+                        <barButtonItem key="leftBarButtonItem" id="TYF-g0-QNI">
+                            <connections>
+                                <action selector="pressedCancel:" destination="kXu-df-Dpk" id="eB8-S3-t0S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="languagePickerTableView" destination="6Ak-fJ-KF3" id="chL-iB-PU7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6T-Jk-OW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="-615"/>
         </scene>
         <!--Object Detail View Controller-->
         <scene sceneID="Qai-aF-gN7">
@@ -200,21 +281,21 @@
                                         </connections>
                                     </button>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-UX-dPA">
-                                        <rect key="frame" x="8" y="397" width="359" height="278"/>
+                                        <rect key="frame" x="8" y="337" width="359" height="338"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-Jl-O68" customClass="SelectObjectTableView" customModule="snaplingua_ios" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="33" width="359" height="237"/>
+                                                <rect key="frame" x="0.0" y="33" width="359" height="297"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectObjectCell" textLabel="Zw2-js-ubo" rowHeight="60" style="IBUITableViewCellStyleDefault" id="yAs-Rr-uyb">
-                                                        <rect key="frame" x="0.0" y="28" width="359" height="60"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectObjectCell" textLabel="Zw2-js-ubo" rowHeight="63" style="IBUITableViewCellStyleDefault" id="yAs-Rr-uyb">
+                                                        <rect key="frame" x="0.0" y="28" width="359" height="63"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yAs-Rr-uyb" id="Bou-Or-65x">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="59.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="62.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zw2-js-ubo">
-                                                                    <rect key="frame" x="15" y="0.0" width="329" height="59.5"/>
+                                                                    <rect key="frame" x="15" y="0.0" width="329" height="62.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                     <nil key="textColor"/>
@@ -248,7 +329,7 @@
                                             <constraint firstAttribute="trailing" secondItem="HVo-zF-Yu4" secondAttribute="trailing" id="JPf-PF-9he"/>
                                             <constraint firstAttribute="trailing" secondItem="YZ1-Jl-O68" secondAttribute="trailing" id="X1W-CB-ybR"/>
                                             <constraint firstItem="HVo-zF-Yu4" firstAttribute="top" secondItem="g8n-UX-dPA" secondAttribute="top" id="kvk-AK-Oty"/>
-                                            <constraint firstAttribute="height" constant="278" id="lRB-ck-c6A"/>
+                                            <constraint firstAttribute="height" constant="338" id="lRB-ck-c6A"/>
                                             <constraint firstItem="YZ1-Jl-O68" firstAttribute="top" secondItem="HVo-zF-Yu4" secondAttribute="bottom" id="sh4-ZG-9an"/>
                                             <constraint firstAttribute="bottom" secondItem="YZ1-Jl-O68" secondAttribute="bottom" constant="8" id="td4-bw-HK8"/>
                                             <constraint firstItem="HVo-zF-Yu4" firstAttribute="leading" secondItem="g8n-UX-dPA" secondAttribute="leading" id="vay-cG-pxk"/>
@@ -299,4 +380,7 @@
             <point key="canvasLocation" x="1116" y="80.50974512743629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-camera" width="30" height="30"/>
+    </resources>
 </document>

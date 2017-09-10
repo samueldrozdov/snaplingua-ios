@@ -27,12 +27,18 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
     snapButton.layer.shadowPath = UIBezierPath(rect: snapButton.bounds).cgPath
         
     self.objectListTableView.delegate = self
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
+    self.updateBarItemFlag()
     self.objectListTableView.reload()
+  }
+  
+  func updateBarItemFlag() {
+    self.navigationItem.leftBarButtonItem?.title = languageFlags[SLUserDefaultsManager.shared.getLanguageIndex()]
   }
 
   @IBAction func snapButtonPressed(_ sender: UIButton) {
@@ -47,7 +53,7 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 120
+    return 150
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,7 +65,11 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
       let backItem = UIBarButtonItem()
       backItem.title = "Back"
       navigationItem.backBarButtonItem = backItem
-
+    }
+    else if segue.identifier == "ShowLanguagePicker" {
+      let backItem = UIBarButtonItem()
+      backItem.title = "Cancel"
+      navigationItem.backBarButtonItem = backItem
     }
   }
 }
@@ -97,7 +107,7 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     cell.wordImageView?.image = UIImage(data:(word["image"] as! Data), scale:1.0)
     
     let params = ROGoogleTranslateParams(source: "en",
-                                         target: "ru",
+                                         target: languageCodes[SLUserDefaultsManager.shared.getLanguageIndex()],
                                          text: (word["word"] as? String)!)
     
     
