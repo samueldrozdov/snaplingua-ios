@@ -136,7 +136,7 @@
                     <connections>
                         <outlet property="objectListTableView" destination="ZqU-5r-ZY4" id="Sk7-G9-k9X"/>
                         <outlet property="snapButton" destination="KfX-4g-ltq" id="D8x-By-SWw"/>
-                        <segue destination="7JV-ji-OLs" kind="showDetail" identifier="ShowObjectDetail" action="showViewController:sender:" id="HPD-lQ-mGj"/>
+                        <segue destination="7JV-ji-OLs" kind="show" identifier="ShowObjectDetail" id="HPD-lQ-mGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAx-Pa-abB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -203,7 +203,7 @@
             </objects>
             <point key="canvasLocation" x="324" y="-615"/>
         </scene>
-        <!--Object Detail View Controller-->
+        <!--Word-->
         <scene sceneID="Qai-aF-gN7">
             <objects>
                 <viewController id="7JV-ji-OLs" customClass="ObjectDetailViewController" customModule="snaplingua_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,13 +227,20 @@
                             <constraint firstItem="Oi0-vL-Tc5" firstAttribute="leading" secondItem="uiT-ME-E5r" secondAttribute="leading" id="yQC-6t-Vtr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Word" id="QvO-S6-e2i">
+                        <barButtonItem key="rightBarButtonItem" title="Listen" id="wMm-am-BKK">
+                            <connections>
+                                <action selector="pressedListen:" destination="7JV-ji-OLs" id="qai-1i-Zxj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="wordImageView" destination="Oi0-vL-Tc5" id="bJH-rX-RnX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrY-5J-zds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="-614.84257871064472"/>
+            <point key="canvasLocation" x="1116" y="-616"/>
         </scene>
         <!--Snap View Controller-->
         <scene sceneID="wCX-dy-hFR">

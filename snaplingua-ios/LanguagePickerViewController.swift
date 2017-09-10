@@ -11,6 +11,8 @@ import UIKit
 let languageCodes: [String] = ["es", "ru", "sv", "ja", "el"]
 let languageNames: [String] = ["Spanish", "Russian", "Swedish", "Japanese", "Greek"]
 let languageFlags: [String] = ["🇪🇸", "🇷🇺", "🇸🇪", "🇯🇵", "🇬🇷"]
+let languageCodesApple: [String] = ["es-ES", "ru-RU", "sv-SE", "ja-JP", "el-GR"]
+
 
 class LanuagePickerViewController: UIViewController, UITableViewDelegate {
   
