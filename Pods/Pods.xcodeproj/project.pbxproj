@@ -7,76 +7,140 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		303804A2F512A24D5984183698E44EB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		87C04094FB6179CF228B906EB68C92E8 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */; };
-		A3E86BA7F02EB3080B7C9BAC6F72CA2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		AAD997764611EAE8BCBD605F8694DC2D /* Pods-snaplingua-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FBB216F7D3354255D10AA481D03E8F /* Pods-snaplingua-ios-dummy.m */; };
-		ADBFB481A6E8B8CBF16F635D39095EA6 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7C5E8082F6A3960F169C08C8EEBC1C1 /* Pods-snaplingua-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3497D3786E8D59EAB2B0C235C8A9D69 /* Pods-snaplingua-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD8A85DF33A36D3DA54C7C3FE33FED86 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */; };
+		178BDB729BD0FADBC294032902B7EBBC /* ROGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC023181FA186F128D5FE50BDD539ED1 /* ROGoogleTranslate.swift */; };
+		4E70B71F1B9AF404DFDE1EB22E5A24C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */; };
+		5D92ADB755A55FE9F37AA92504D68F8C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71B3841577F030F6A7C3BA057F8E7E /* SwiftyJSON.swift */; };
+		6661250E445BA79EDF8972007CAD67D6 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF8FC16426C03438838C22D26816BE9 /* SwiftyJSON-dummy.m */; };
+		7403D3E7C66BFBD467D032270EE1C0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */; };
+		8DC014750F9AB5DF954AA5D48C6728F9 /* ROGoogleTranslate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A30E09D02EC84D9C6D33A8E8154EC43B /* ROGoogleTranslate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B026911CCBA94FC7D4FF9AFD847A7ACE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */; };
+		B762C7FBCC7D9ED1ADBB4F928013BC80 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AF9EC704AAD470CAC8FE0D05A5430B /* SystemConfiguration.framework */; };
+		C9D663E3164BB638B795A7447DBD810D /* Pods-snaplingua-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3497D3786E8D59EAB2B0C235C8A9D69 /* Pods-snaplingua-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D616724AC3E1D8197E699D256B6F7D5C /* ROGoogleTranslate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDF87F90DCBC16D715D7761ABC17EA7 /* ROGoogleTranslate-dummy.m */; };
+		DCA3A03ADA1B42FC6265CDE6D354F23C /* Pods-snaplingua-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FBB216F7D3354255D10AA481D03E8F /* Pods-snaplingua-ios-dummy.m */; };
+		DF56AB406BD01367ECABAAD2090E1C64 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57AA5DCB6B09A3959DA49586129D6113 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2E4B691CE206A74C3D3BCBEE822C7AB9 /* PBXContainerItemProxy */ = {
+		75A0219E83B7FF480BCC3F0CC4049B71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A8EB171839A9CBF36B1F3499509104B4;
+			remoteGlobalIDString = EFD39273EA35FFA2567243B8AF01FDA1;
 			remoteInfo = SwiftyJSON;
+		};
+		F815B11BDAAEB39DC885DAE64A3CC83A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66CDACB61995FF02A1F57DAAF628CE72;
+			remoteInfo = ROGoogleTranslate;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		0824A996B27D13612BA3A3E2DA8FFC1A /* Pods-snaplingua-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-snaplingua-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		1806EB46EA178241FF28385A50FDBEC5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		3BAC0BA4076B1EA0CFFAC8217B856483 /* Pods-snaplingua-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-snaplingua-ios.release.xcconfig"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7CAEB7CDC816E8888BF6EFD3FF0DF928 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBCEFAE2ABF239F6BCEB785D24FC3F7 /* ROGoogleTranslate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ROGoogleTranslate.framework; path = ROGoogleTranslate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4216543235ADFEF8126D03C920F9FFB3 /* ROGoogleTranslate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ROGoogleTranslate.xcconfig; sourceTree = "<group>"; };
+		57AA5DCB6B09A3959DA49586129D6113 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		609C73381ECBA951B0ABAF113D237C23 /* ROGoogleTranslate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ROGoogleTranslate-prefix.pch"; sourceTree = "<group>"; };
+		6BC6963691FF4AB5AA064B6B562FA663 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		7BD5247486558D90115F9AEC0A96DF67 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		7E71B3841577F030F6A7C3BA057F8E7E /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		91FBB216F7D3354255D10AA481D03E8F /* Pods-snaplingua-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-snaplingua-ios-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9FC25CA955F055DA76C179119FCE50CC /* Pods_snaplingua_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_snaplingua_ios.framework; path = "Pods-snaplingua-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11D1A355CCB8BE7601CFCEEC7A9A745 /* Pods-snaplingua-ios-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-snaplingua-ios-acknowledgements.plist"; sourceTree = "<group>"; };
 		A1F25A41C982D981B52840965943C0B5 /* Pods-snaplingua-ios-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-snaplingua-ios-resources.sh"; sourceTree = "<group>"; };
-		BBF610E40BDF6E542FA21FF7E5491205 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		A30E09D02EC84D9C6D33A8E8154EC43B /* ROGoogleTranslate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ROGoogleTranslate-umbrella.h"; sourceTree = "<group>"; };
+		B1B92920C372ABAD8B585749E05C67A0 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		C3497D3786E8D59EAB2B0C235C8A9D69 /* Pods-snaplingua-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-snaplingua-ios-umbrella.h"; sourceTree = "<group>"; };
-		C4A9A658C966F6BB111BEDBDEA1F874A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5395A04C94A9552470A4EB07C216408 /* ROGoogleTranslate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ROGoogleTranslate.modulemap; sourceTree = "<group>"; };
 		C81BF90F962ECE23C9598F5BC5A96467 /* Pods-snaplingua-ios-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-snaplingua-ios-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		CB8231F20083A29F9947F83269FC7B85 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC023181FA186F128D5FE50BDD539ED1 /* ROGoogleTranslate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ROGoogleTranslate.swift; path = Source/ROGoogleTranslate.swift; sourceTree = "<group>"; };
+		CEDF87F90DCBC16D715D7761ABC17EA7 /* ROGoogleTranslate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ROGoogleTranslate-dummy.m"; sourceTree = "<group>"; };
+		CEF8FC16426C03438838C22D26816BE9 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		EDBE27CB33FF061DC3FFAAA018660BDF /* Pods-snaplingua-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-snaplingua-ios.modulemap"; sourceTree = "<group>"; };
 		EFCCDA21CC35A423C2D36F1F98CEE38D /* Pods-snaplingua-ios-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-snaplingua-ios-frameworks.sh"; sourceTree = "<group>"; };
-		F5202E631096CA424B82FDDDCDE3BED4 /* Pods_snaplingua_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_snaplingua_ios.framework; path = "Pods-snaplingua-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22808CA0694EADCB875F6CD575736D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2AF9EC704AAD470CAC8FE0D05A5430B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		FD3A34DF90760542669C1D7914BC27D3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		63372EC8DD2A5198DB9A1209DFBB4314 /* Frameworks */ = {
+		552FADCA5BB0B67944A11329705AA04C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				303804A2F512A24D5984183698E44EB9 /* Foundation.framework in Frameworks */,
+				4E70B71F1B9AF404DFDE1EB22E5A24C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9083FE082D8DBB2321FD6CDFF1336340 /* Frameworks */ = {
+		A4E53E4C983EE794E93ABF52B83D2A1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E86BA7F02EB3080B7C9BAC6F72CA2D /* Foundation.framework in Frameworks */,
+				B026911CCBA94FC7D4FF9AFD847A7ACE /* Foundation.framework in Frameworks */,
+				B762C7FBCC7D9ED1ADBB4F928013BC80 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E36719F491D62FA2844737E4C0D6AE6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7403D3E7C66BFBD467D032270EE1C0B7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30BEB797DEC473A639DC4C3065BDE37F /* Products */ = {
+		016C5365AA715705CA514ACCD7E64E3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5202E631096CA424B82FDDDCDE3BED4 /* Pods_snaplingua_ios.framework */,
-				7CAEB7CDC816E8888BF6EFD3FF0DF928 /* SwiftyJSON.framework */,
+				9FC25CA955F055DA76C179119FCE50CC /* Pods_snaplingua_ios.framework */,
+				3FBCEFAE2ABF239F6BCEB785D24FC3F7 /* ROGoogleTranslate.framework */,
+				FD3A34DF90760542669C1D7914BC27D3 /* SwiftyJSON.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0820452DA77AF122F541B56D33A9A9E4 /* ROGoogleTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				CC023181FA186F128D5FE50BDD539ED1 /* ROGoogleTranslate.swift */,
+				6D37CF788B79A71643094DDDB6971111 /* Support Files */,
+			);
+			name = ROGoogleTranslate;
+			path = ROGoogleTranslate;
+			sourceTree = "<group>";
+		};
+		2E1863053A1A0DFD632C089AEBA8E2AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0820452DA77AF122F541B56D33A9A9E4 /* ROGoogleTranslate */,
+				56A7CB112D15D56DF42A8AD9FABEA845 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		31F415E4CDFCD95125983B7066E5A4FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB8231F20083A29F9947F83269FC7B85 /* Info.plist */,
+				6BC6963691FF4AB5AA064B6B562FA663 /* SwiftyJSON.modulemap */,
+				7BD5247486558D90115F9AEC0A96DF67 /* SwiftyJSON.xcconfig */,
+				CEF8FC16426C03438838C22D26816BE9 /* SwiftyJSON-dummy.m */,
+				B1B92920C372ABAD8B585749E05C67A0 /* SwiftyJSON-prefix.pch */,
+				57AA5DCB6B09A3959DA49586129D6113 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		3E2C6A16BEF4DDC172738BDB8D234AEF /* Targets Support Files */ = {
@@ -87,61 +151,54 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		70A8E4D3C62B6C203D238581DA091C21 /* SwiftyJSON */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */,
-				8EC39E1DC11846207722B71AAFE40F98 /* Support Files */,
+				E7E283C74B7E79D37D9BAAFF277942F5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56A7CB112D15D56DF42A8AD9FABEA845 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				7E71B3841577F030F6A7C3BA057F8E7E /* SwiftyJSON.swift */,
+				31F415E4CDFCD95125983B7066E5A4FA /* Support Files */,
 			);
 			name = SwiftyJSON;
 			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		6D37CF788B79A71643094DDDB6971111 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F22808CA0694EADCB875F6CD575736D6 /* Info.plist */,
+				C5395A04C94A9552470A4EB07C216408 /* ROGoogleTranslate.modulemap */,
+				4216543235ADFEF8126D03C920F9FFB3 /* ROGoogleTranslate.xcconfig */,
+				CEDF87F90DCBC16D715D7761ABC17EA7 /* ROGoogleTranslate-dummy.m */,
+				609C73381ECBA951B0ABAF113D237C23 /* ROGoogleTranslate-prefix.pch */,
+				A30E09D02EC84D9C6D33A8E8154EC43B /* ROGoogleTranslate-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ROGoogleTranslate";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BD1E3C710F12F4B4C092FC8E2AD22110 /* Pods */,
-				30BEB797DEC473A639DC4C3065BDE37F /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				2E1863053A1A0DFD632C089AEBA8E2AD /* Pods */,
+				016C5365AA715705CA514ACCD7E64E3E /* Products */,
 				3E2C6A16BEF4DDC172738BDB8D234AEF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8EC39E1DC11846207722B71AAFE40F98 /* Support Files */ = {
+		E7E283C74B7E79D37D9BAAFF277942F5 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C4A9A658C966F6BB111BEDBDEA1F874A /* Info.plist */,
-				D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */,
-				2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */,
-				32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */,
-				BBF610E40BDF6E542FA21FF7E5491205 /* SwiftyJSON-prefix.pch */,
-				05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD1E3C710F12F4B4C092FC8E2AD22110 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				70A8E4D3C62B6C203D238581DA091C21 /* SwiftyJSON */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				97D7E984AA2ED06FC886024282B47207 /* Foundation.framework */,
+				F2AF9EC704AAD470CAC8FE0D05A5430B /* SystemConfiguration.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -167,50 +224,76 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6EC23E5C87BDBF33705978C80402F587 /* Headers */ = {
+		4F34A178DB7C7226251730F940130B38 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C5E8082F6A3960F169C08C8EEBC1C1 /* Pods-snaplingua-ios-umbrella.h in Headers */,
+				8DC014750F9AB5DF954AA5D48C6728F9 /* ROGoogleTranslate-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7F5199DA4CCE1EC2EDF5C1F6504D7ED /* Headers */ = {
+		E28215CA7B79AD8D6618B3FF63F0AE1E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADBFB481A6E8B8CBF16F635D39095EA6 /* SwiftyJSON-umbrella.h in Headers */,
+				C9D663E3164BB638B795A7447DBD810D /* Pods-snaplingua-ios-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB400DD143DB156FEB6BED6E1F4A13CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF56AB406BD01367ECABAAD2090E1C64 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		37AD3039B5016CA8E516A59FD753EB36 /* Pods-snaplingua-ios */ = {
+		66CDACB61995FF02A1F57DAAF628CE72 /* ROGoogleTranslate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDCA879DB8DE46AB8B69FEFC13F2E186 /* Build configuration list for PBXNativeTarget "Pods-snaplingua-ios" */;
+			buildConfigurationList = 64C872331FDFDEF228126E89A4352FC7 /* Build configuration list for PBXNativeTarget "ROGoogleTranslate" */;
 			buildPhases = (
-				987A12526BCB81478B6E7347BBFDC3D3 /* Sources */,
-				9083FE082D8DBB2321FD6CDFF1336340 /* Frameworks */,
-				6EC23E5C87BDBF33705978C80402F587 /* Headers */,
+				A6456EDADB8728EDE6A51B47FA6081B9 /* Sources */,
+				A4E53E4C983EE794E93ABF52B83D2A1C /* Frameworks */,
+				4F34A178DB7C7226251730F940130B38 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9CC195C2A03F834440363794BFC444E8 /* PBXTargetDependency */,
+			);
+			name = ROGoogleTranslate;
+			productName = ROGoogleTranslate;
+			productReference = 3FBCEFAE2ABF239F6BCEB785D24FC3F7 /* ROGoogleTranslate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0B7A0C3222B2381FB9DD912F923792A /* Pods-snaplingua-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2856CA9207E94D8A427201AE2B085A06 /* Build configuration list for PBXNativeTarget "Pods-snaplingua-ios" */;
+			buildPhases = (
+				B88A2F3C1E36C423296A47318BFEC21F /* Sources */,
+				552FADCA5BB0B67944A11329705AA04C /* Frameworks */,
+				E28215CA7B79AD8D6618B3FF63F0AE1E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D812994503FF7B3D24F7BC4F0AAA27F5 /* PBXTargetDependency */,
+				0B540F24AA7994AF19406E8EC84E70E3 /* PBXTargetDependency */,
 			);
 			name = "Pods-snaplingua-ios";
 			productName = "Pods-snaplingua-ios";
-			productReference = F5202E631096CA424B82FDDDCDE3BED4 /* Pods_snaplingua_ios.framework */;
+			productReference = 9FC25CA955F055DA76C179119FCE50CC /* Pods_snaplingua_ios.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A8EB171839A9CBF36B1F3499509104B4 /* SwiftyJSON */ = {
+		EFD39273EA35FFA2567243B8AF01FDA1 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A1FCF5B7BF5F75BBD879459450BD596 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = E7505C849007E5A08E20D194193017F7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				6FC561F4ED2E36D240FBEEE0E535974D /* Sources */,
-				63372EC8DD2A5198DB9A1209DFBB4314 /* Frameworks */,
-				E7F5199DA4CCE1EC2EDF5C1F6504D7ED /* Headers */,
+				412D9E3C73274556520D855238B079C2 /* Sources */,
+				E36719F491D62FA2844737E4C0D6AE6F /* Frameworks */,
+				FB400DD143DB156FEB6BED6E1F4A13CF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -218,7 +301,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = 7CAEB7CDC816E8888BF6EFD3FF0DF928 /* SwiftyJSON.framework */;
+			productReference = FD3A34DF90760542669C1D7914BC27D3 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -238,56 +321,72 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 30BEB797DEC473A639DC4C3065BDE37F /* Products */;
+			productRefGroup = 016C5365AA715705CA514ACCD7E64E3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37AD3039B5016CA8E516A59FD753EB36 /* Pods-snaplingua-ios */,
-				A8EB171839A9CBF36B1F3499509104B4 /* SwiftyJSON */,
+				C0B7A0C3222B2381FB9DD912F923792A /* Pods-snaplingua-ios */,
+				66CDACB61995FF02A1F57DAAF628CE72 /* ROGoogleTranslate */,
+				EFD39273EA35FFA2567243B8AF01FDA1 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6FC561F4ED2E36D240FBEEE0E535974D /* Sources */ = {
+		412D9E3C73274556520D855238B079C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C04094FB6179CF228B906EB68C92E8 /* SwiftyJSON-dummy.m in Sources */,
-				FD8A85DF33A36D3DA54C7C3FE33FED86 /* SwiftyJSON.swift in Sources */,
+				6661250E445BA79EDF8972007CAD67D6 /* SwiftyJSON-dummy.m in Sources */,
+				5D92ADB755A55FE9F37AA92504D68F8C /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		987A12526BCB81478B6E7347BBFDC3D3 /* Sources */ = {
+		A6456EDADB8728EDE6A51B47FA6081B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD997764611EAE8BCBD605F8694DC2D /* Pods-snaplingua-ios-dummy.m in Sources */,
+				D616724AC3E1D8197E699D256B6F7D5C /* ROGoogleTranslate-dummy.m in Sources */,
+				178BDB729BD0FADBC294032902B7EBBC /* ROGoogleTranslate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B88A2F3C1E36C423296A47318BFEC21F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA3A03ADA1B42FC6265CDE6D354F23C /* Pods-snaplingua-ios-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9CC195C2A03F834440363794BFC444E8 /* PBXTargetDependency */ = {
+		0B540F24AA7994AF19406E8EC84E70E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
-			target = A8EB171839A9CBF36B1F3499509104B4 /* SwiftyJSON */;
-			targetProxy = 2E4B691CE206A74C3D3BCBEE822C7AB9 /* PBXContainerItemProxy */;
+			target = EFD39273EA35FFA2567243B8AF01FDA1 /* SwiftyJSON */;
+			targetProxy = 75A0219E83B7FF480BCC3F0CC4049B71 /* PBXContainerItemProxy */;
+		};
+		D812994503FF7B3D24F7BC4F0AAA27F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ROGoogleTranslate;
+			target = 66CDACB61995FF02A1F57DAAF628CE72 /* ROGoogleTranslate */;
+			targetProxy = F815B11BDAAEB39DC885DAE64A3CC83A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BD29F6FB778DA9EDD6175CCD32B908E /* Debug */ = {
+		3A8A75EA3CB9220C9A74A8CF3A99E568 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 7BD5247486558D90115F9AEC0A96DF67 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -300,29 +399,29 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		4D98972BFD9CDFC8BCFC7AEE9428F462 /* Debug */ = {
+		563BE000452E77DB87D721467D0BD7A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0824A996B27D13612BA3A3E2DA8FFC1A /* Pods-snaplingua-ios.debug.xcconfig */;
+			baseConfigurationReference = 3BAC0BA4076B1EA0CFFAC8217B856483 /* Pods-snaplingua-ios.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -335,7 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -343,14 +442,13 @@
 				PRODUCT_NAME = Pods_snaplingua_ios;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -396,40 +494,79 @@
 			};
 			name = Release;
 		};
-		80F37A794EE25F07329CE1FB2BD5C55A /* Release */ = {
+		AAE3D02F8A687AD56D5E0A863F182541 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 0824A996B27D13612BA3A3E2DA8FFC1A /* Pods-snaplingua-ios.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-snaplingua-ios/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_snaplingua_ios;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		B2B0E4B060C44687D2BCD0A71710A392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4216543235ADFEF8126D03C920F9FFB3 /* ROGoogleTranslate.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ROGoogleTranslate/ROGoogleTranslate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ROGoogleTranslate/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ROGoogleTranslate/ROGoogleTranslate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ROGoogleTranslate;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		EF26A3C5B6EDA309192C6025F703DE0A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -480,9 +617,9 @@
 			};
 			name = Debug;
 		};
-		FA02577350EECA7C66794FF79F74B861 /* Release */ = {
+		F6E2CE6E1A4035DB73107A6C9CCFADE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BAC0BA4076B1EA0CFFAC8217B856483 /* Pods-snaplingua-ios.release.xcconfig */;
+			baseConfigurationReference = 4216543235ADFEF8126D03C920F9FFB3 /* ROGoogleTranslate.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -496,20 +633,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-snaplingua-ios/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ROGoogleTranslate/ROGoogleTranslate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ROGoogleTranslate/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.modulemap";
+				MODULEMAP_FILE = "Target Support Files/ROGoogleTranslate/ROGoogleTranslate.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_snaplingua_ios;
+				PRODUCT_NAME = ROGoogleTranslate;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,9 +652,53 @@
 			};
 			name = Release;
 		};
+		FB1B035EB76F2352540C2C8DAFFDB2F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD5247486558D90115F9AEC0A96DF67 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2856CA9207E94D8A427201AE2B085A06 /* Build configuration list for PBXNativeTarget "Pods-snaplingua-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE3D02F8A687AD56D5E0A863F182541 /* Debug */,
+				563BE000452E77DB87D721467D0BD7A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -530,20 +708,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A1FCF5B7BF5F75BBD879459450BD596 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		64C872331FDFDEF228126E89A4352FC7 /* Build configuration list for PBXNativeTarget "ROGoogleTranslate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0BD29F6FB778DA9EDD6175CCD32B908E /* Debug */,
-				80F37A794EE25F07329CE1FB2BD5C55A /* Release */,
+				B2B0E4B060C44687D2BCD0A71710A392 /* Debug */,
+				F6E2CE6E1A4035DB73107A6C9CCFADE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDCA879DB8DE46AB8B69FEFC13F2E186 /* Build configuration list for PBXNativeTarget "Pods-snaplingua-ios" */ = {
+		E7505C849007E5A08E20D194193017F7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D98972BFD9CDFC8BCFC7AEE9428F462 /* Debug */,
-				FA02577350EECA7C66794FF79F74B861 /* Release */,
+				FB1B035EB76F2352540C2C8DAFFDB2F8 /* Debug */,
+				3A8A75EA3CB9220C9A74A8CF3A99E568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

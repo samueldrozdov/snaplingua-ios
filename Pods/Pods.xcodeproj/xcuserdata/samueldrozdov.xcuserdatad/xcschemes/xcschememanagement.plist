@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ROGoogleTranslate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>37AD3039B5016CA8E516A59FD753EB36</key>
+		<key>66CDACB61995FF02A1F57DAAF628CE72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8EB171839A9CBF36B1F3499509104B4</key>
+		<key>C0B7A0C3222B2381FB9DD912F923792A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFD39273EA35FFA2567243B8AF01FDA1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37AD3039B5016CA8E516A59FD753EB36"
+               BlueprintIdentifier = "C0B7A0C3222B2381FB9DD912F923792A"
                BuildableName = "Pods_snaplingua_ios.framework"
                BlueprintName = "Pods-snaplingua-ios"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37AD3039B5016CA8E516A59FD753EB36"
+            BlueprintIdentifier = "C0B7A0C3222B2381FB9DD912F923792A"
             BuildableName = "Pods_snaplingua_ios.framework"
             BlueprintName = "Pods-snaplingua-ios"
             ReferencedContainer = "container:Pods.xcodeproj">
