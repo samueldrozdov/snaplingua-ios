@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate {
+class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCImageRequestManagerDelegate {
   
   @IBOutlet weak var captureButton: UIButton!
   @IBOutlet weak var previewView: UIView!
@@ -20,8 +20,13 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate {
   var videoPreviewLayer: AVCaptureVideoPreviewLayer?
   var capturePhotoOutput: AVCapturePhotoOutput?
   
+  var imageRequestManager: GVImageRequestManager?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    imageRequestManager = GVImageRequestManager()
+    imageRequestManager?.delegate = self
     
     captureButton.clipsToBounds = true
     captureButton.backgroundColor = UIColor.init(white: 1.0, alpha: 0.3)
@@ -68,11 +73,28 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
   }
   
-  func capturedImage(image: UIImage) {
+  func requestCompleted(_ manager: GVImageRequestManager, responseStatus: String, labels: NSArray) {
     self.endCaptureAnimation()
     
-    let binaryImageData = base64EncodeImage(image)
-    createRequest(with: binaryImageData)
+    if responseStatus == GVImageResponseStatus.RequestSucceededButUncertainLabels {
+      let alert = UIAlertController(title: "Couldn't Identify Object", message: "Please take another photo.", preferredStyle: UIAlertControllerStyle.alert)
+      alert.show(self, sender: self)
+    }
+    else if responseStatus == GVImageResponseStatus.RequestFailed {
+      let alert = UIAlertController(title: "Request Failed", message: "Please check you internet connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
+      alert.show(self, sender: self)
+    }
+    else if responseStatus == GVImageResponseStatus.RequestSucceeded {
+      print(labels)
+    }
+    
+  }
+
+  
+  func capturedImage(image: UIImage) {
+    
+    let binaryImageData = imageRequestManager?.base64EncodeImage(image)
+    imageRequestManager?.createRequest(with: binaryImageData!)
 
     DLog(message: "capturedImage")
   }
