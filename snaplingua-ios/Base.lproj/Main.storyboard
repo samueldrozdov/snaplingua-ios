@@ -102,7 +102,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfX-4g-ltq">
                                 <rect key="frame" x="279" y="571" width="72" height="72"/>
-                                <color key="backgroundColor" red="1" green="0.76752069997986883" blue="0.15108245449405677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.72156862745098038" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="50T-VE-aHE"/>
                                     <constraint firstAttribute="width" constant="72" id="Wej-VO-9w6"/>
@@ -338,7 +338,7 @@
                                     </view>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3NA-eq-EhW">
                                         <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                        <color key="color" red="1" green="0.76752069999999994" blue="0.15108245449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="color" red="1" green="0.72156862745098038" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>

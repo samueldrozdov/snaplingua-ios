@@ -26,7 +26,7 @@ final class SLUserDefaultsManager: NSObject {
     
     prevWords.insert(wordDictionary, at: 0)
 
-    UserDefaults.standard.set(prevWords, forKey: WORDS_KEY)
+    UserDefaults.standard.set(NSArray(array: prevWords), forKey: WORDS_KEY)
     UserDefaults.standard.synchronize()
   }
 
