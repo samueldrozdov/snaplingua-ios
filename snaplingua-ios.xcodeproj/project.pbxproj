@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		41C8252F1F64C5F500CDFAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */; };
-		41C825311F64C5F500CDFAEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825301F64C5F500CDFAEC /* ViewController.swift */; };
 		41C825341F64C5F500CDFAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C825321F64C5F500CDFAEC /* Main.storyboard */; };
 		41C825361F64C5F500CDFAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C825351F64C5F500CDFAEC /* Assets.xcassets */; };
 		41C825391F64C5F500CDFAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C825371F64C5F500CDFAEC /* LaunchScreen.storyboard */; };
 		41C825431F64C62800CDFAEC /* SLLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825411F64C62800CDFAEC /* SLLogging.swift */; };
 		41C825441F64C62800CDFAEC /* SLNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825421F64C62800CDFAEC /* SLNotifications.swift */; };
+		41C825461F64C79900CDFAEC /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825451F64C79900CDFAEC /* ObjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41C8252B1F64C5F500CDFAEC /* snaplingua-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "snaplingua-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41C825301F64C5F500CDFAEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41C825331F64C5F500CDFAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41C825351F64C5F500CDFAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41C825381F64C5F500CDFAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41C8253A1F64C5F500CDFAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41C825411F64C62800CDFAEC /* SLLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLogging.swift; sourceTree = "<group>"; };
 		41C825421F64C62800CDFAEC /* SLNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLNotifications.swift; sourceTree = "<group>"; };
+		41C825451F64C79900CDFAEC /* ObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */,
 				41C825401F64C62800CDFAEC /* Utils */,
-				41C825301F64C5F500CDFAEC /* ViewController.swift */,
+				41C825451F64C79900CDFAEC /* ObjectViewController.swift */,
 				41C825321F64C5F500CDFAEC /* Main.storyboard */,
 				41C825351F64C5F500CDFAEC /* Assets.xcassets */,
 				41C825371F64C5F500CDFAEC /* LaunchScreen.storyboard */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41C825311F64C5F500CDFAEC /* ViewController.swift in Sources */,
+				41C825461F64C79900CDFAEC /* ObjectViewController.swift in Sources */,
 				41C825441F64C62800CDFAEC /* SLNotifications.swift in Sources */,
 				41C8252F1F64C5F500CDFAEC /* AppDelegate.swift in Sources */,
 				41C825431F64C62800CDFAEC /* SLLogging.swift in Sources */,
