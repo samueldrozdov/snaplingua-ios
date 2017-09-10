@@ -101,6 +101,17 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     self.reloadData()
   }
   
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    let cell = self.cellForRow(at: indexPath)
+    cell?.contentView.clipsToBounds = true;
+    
+    if editingStyle == .delete {
+      SLUserDefaultsManager.shared.deleteWordAtIndex(index: indexPath.row)
+      words = SLUserDefaultsManager.shared.getPreviousWords()
+      self.deleteRows(at: [indexPath], with: .automatic)
+    }
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return words.count
   }

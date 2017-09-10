@@ -20,7 +20,7 @@ final class SLUserDefaultsManager: NSObject {
     let prevWords = getPreviousWords() as NSMutableArray
     
     let wordDictionary = NSMutableDictionary()
-    let imageData = UIImageJPEGRepresentation(image, 1)
+    let imageData = UIImageJPEGRepresentation(image, 0.3)
     wordDictionary.setObject(imageData!, forKey: "image" as NSCopying)
     wordDictionary.setObject(word, forKey: "word" as NSCopying)
     
@@ -36,6 +36,13 @@ final class SLUserDefaultsManager: NSObject {
       words = NSMutableArray(array: UserDefaults.standard.object(forKey: WORDS_KEY) as! NSArray)
     }
     return words
+  }
+  
+  func deleteWordAtIndex(index: NSInteger) {
+    let prevWords = getPreviousWords() as NSMutableArray
+    prevWords.removeObject(at: index)
+    UserDefaults.standard.set(NSArray(array: prevWords), forKey: WORDS_KEY)
+    UserDefaults.standard.synchronize()
   }
   
   func setLanguage(index: NSInteger) {

@@ -110,8 +110,6 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   }
   
   @IBAction func pressedCaptureButton(_ sender: UIButton) {
-    self.startCaptureAnimation()
-    
     guard let capturePhotoOutput = self.capturePhotoOutput else { return }
     
     let photoSettings = AVCapturePhotoSettings()
@@ -141,6 +139,8 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   }
   
   func capturedImage(image: UIImage) {
+    self.startCaptureAnimation()
+    
     captureSession?.stopRunning()
     
     capturedImage = image
