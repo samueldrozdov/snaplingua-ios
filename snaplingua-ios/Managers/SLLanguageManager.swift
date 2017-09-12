@@ -14,14 +14,36 @@ final class SLLanguageManager: NSObject {
   static let shared = SLLanguageManager()
   private override init() { }
   
-  // TODO: finish
-  func getActiveSourceLanguage() -> String {
-    return ""
+  func getSourceLanguage() -> String {
+    guard let language = UserDefaults.standard.object(forKey: UserDefaultKeys.Languages.Source) else {
+      return "English"
+    }
+    return language as! String
   }
   
-  // TODO: finish
-  func getActiveTargetLanguage() -> String {
-    return ""
+  @discardableResult func setSourceLanguage(language: String) -> Bool {
+    if isLanguageIncluded(language: language) == false {
+      DLog(message: "Failed to set source language. Language not available.")
+      return false
+    }
+    UserDefaults.standard.set(language, forKey: UserDefaultKeys.Languages.Source)
+    return true
+  }
+  
+  func getTargetLanguage() -> String {
+    guard let language = UserDefaults.standard.object(forKey: UserDefaultKeys.Languages.Target) else {
+      return "Russian"
+    }
+    return language as! String
+  }
+  
+  @discardableResult func setTargetLanguage(language: String) -> Bool {
+    if isLanguageIncluded(language: language) == false {
+      DLog(message: "Failed to set target language. Language not available.")
+      return false
+    }
+    UserDefaults.standard.set(language, forKey: UserDefaultKeys.Languages.Target)
+    return true
   }
   
   func getTranslation(forString text: String, fromLanguage source: String, toLanguage target: String, completion: @escaping (_ result: String) -> Void) {
@@ -36,5 +58,11 @@ final class SLLanguageManager: NSObject {
     translator.translate(params: params) { (result) in
       completion(result)
     }
+  }
+  
+  func getTranslationForActive(forString text: String, completion: @escaping (_ result: String) -> Void) {
+    getTranslation(forString: text, fromLanguage: SLLanguageManager.shared.getSourceLanguage(), toLanguage: SLLanguageManager.shared.getTargetLanguage(), completion: { (result) in
+      completion(result)
+    })
   }
 }

@@ -39,7 +39,7 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
   }
   
   func updateBarItemFlag() {
-    self.navigationItem.leftBarButtonItem?.title = languageFlags[SLUserDefaultsManager.shared.getLanguageIndex()]
+    self.navigationItem.leftBarButtonItem?.title = getFlagForLanguage(languageName: SLLanguageManager.shared.getTargetLanguage())
   }
 
   @IBAction func snapButtonPressed(_ sender: UIButton) {
@@ -123,16 +123,7 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     let word = words[indexPath.row] as! NSDictionary
     
     cell.wordImageView?.image = UIImage(data:(word["image"] as! Data), scale:1.0)
-    
-    let params = ROGoogleTranslateParams(source: "en",
-                                         target: languageCodes[SLUserDefaultsManager.shared.getLanguageIndex()],
-                                         text: (word["word"] as? String)!)
-    
-    
-    let translator = ROGoogleTranslate()
-    translator.apiKey = GV_IMAGE_API_KEY
-    
-    translator.translate(params: params) { (result) in
+    SLLanguageManager.shared.getTranslationForActive(forString: (word["word"] as! String)) { (result) in
       DispatchQueue.main.async {
         cell.wordLabel?.text = result
       }

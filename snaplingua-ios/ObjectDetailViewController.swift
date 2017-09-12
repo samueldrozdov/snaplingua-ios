@@ -33,8 +33,7 @@ class ObjectDetailViewController: UIViewController {
   
   func speak() {
     let utterance = AVSpeechUtterance(string: wordTranslate)
-    let languageCodeApple = languageCodesApple[SLUserDefaultsManager.shared.getLanguageIndex()]
-    utterance.voice = AVSpeechSynthesisVoice(language: languageCodeApple)
+    utterance.voice = AVSpeechSynthesisVoice(language: getAppleCodeForLanguage(languageName:  SLLanguageManager.shared.getTargetLanguage()))
     utterance.rate = 0.4
     
     let synth = AVSpeechSynthesizer()

@@ -8,6 +8,13 @@
 
 import UIKit
 
+struct UserDefaultKeys {
+  struct Languages {
+    static let Source = "kLanguageSource"
+    static let Target = "kLanguageTarget"
+  }
+}
+
 let WORDS_KEY = "wordsKeys"
 let LANGUAGE_INDEX_KEY = "languageIndexKey"
 
@@ -44,14 +51,4 @@ final class SLUserDefaultsManager: NSObject {
     UserDefaults.standard.set(NSArray(array: prevWords), forKey: WORDS_KEY)
     UserDefaults.standard.synchronize()
   }
-  
-  func setLanguage(index: NSInteger) {
-    UserDefaults.standard.set(index, forKey: LANGUAGE_INDEX_KEY)
-    UserDefaults.standard.synchronize()
-  }
-  
-  func getLanguageIndex() -> NSInteger {
-    return UserDefaults.standard.integer(forKey: LANGUAGE_INDEX_KEY)
-  }
-  
 }

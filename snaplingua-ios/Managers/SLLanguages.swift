@@ -43,7 +43,7 @@ let languageDictionary = [
     "flag" : "🇨🇳"
   ],
   "French": [
-    "name" : "fr",
+    "name" : "French",
     "googleCode" : "es",
     "appleCode" : "fr-FR",
     "flag" : "🇫🇷"
@@ -98,8 +98,12 @@ let languageDictionary = [
   ],
 ]
 
-func getAlphabetizedListOfLanguages() -> NSArray {
-  return languageDictionary.keys.sorted() as NSArray
+func isLanguageIncluded(language: String) -> Bool {
+  return languageDictionary[language] != nil
+}
+
+func getAlphabetizedListOfLanguages() -> [String] {
+  return languageDictionary.keys.sorted() as [String]
 }
 
 func getNameForLanguage(languageName: String) -> String {

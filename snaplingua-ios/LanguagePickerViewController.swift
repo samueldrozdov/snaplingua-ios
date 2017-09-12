@@ -8,12 +8,6 @@
 
 import UIKit
 
-let languageCodes: [String] = ["es", "ru", "sv", "ja", "el", "fr", "iw"]
-let languageNames: [String] = ["Spanish", "Russian", "Swedish", "Japanese", "Greek", "French", "Hebrew"]
-let languageFlags: [String] = ["🇪🇸", "🇷🇺", "🇸🇪", "🇯🇵", "🇬🇷", "🇫🇷", "🇮🇱"]
-let languageCodesApple: [String] = ["es-ES", "ru-RU", "sv-SE", "ja-JP", "el-GR", "fr-FR", "he-IL"]
-
-
 class LanuagePickerViewController: UIViewController, UITableViewDelegate {
   
   @IBOutlet weak var languagePickerTableView: LanguagePickerTableView!
@@ -25,9 +19,10 @@ class LanuagePickerViewController: UIViewController, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    SLUserDefaultsManager.shared.setLanguage(index: indexPath.row)
+    SLLanguageManager.shared.setTargetLanguage(language: getAlphabetizedListOfLanguages()[indexPath.row])
     self.dismiss(animated: true, completion: nil)
   }
+  
   @IBAction func pressedCancel(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
   }
@@ -35,12 +30,15 @@ class LanuagePickerViewController: UIViewController, UITableViewDelegate {
 
 class LanguagePickerTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
   
+  let languages: [String] = getAlphabetizedListOfLanguages()
+  let sourceLanguage: String = SLLanguageManager.shared.getSourceLanguage()
+  let targetLanguage: String = SLLanguageManager.shared.getTargetLanguage()
   var selectedIndex: NSInteger = -1
   
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    self.selectedIndex = SLUserDefaultsManager.shared.getLanguageIndex()
+    self.selectedIndex = languages.index(of: targetLanguage)!
     
     self.delegate = self
     self.dataSource = self
@@ -49,14 +47,14 @@ class LanguagePickerTableView: UITableView, UITableViewDelegate, UITableViewData
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return languageCodes.count
+    return languages.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = self.dequeueReusableCell(withIdentifier: "LanguageCell", for:indexPath)
     
-    cell.textLabel?.text = languageFlags[indexPath.row] + " " + languageNames[indexPath.row]
+    cell.textLabel?.text = getFlagForLanguage(languageName: languages[indexPath.row]) + " " + getNameForLanguage(languageName: languages[indexPath.row])
     
     if selectedIndex == indexPath.row {
       cell.accessoryType = .checkmark
