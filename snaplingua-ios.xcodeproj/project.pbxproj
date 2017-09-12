@@ -13,6 +13,7 @@
 		4151D4D81F65290F00702202 /* ROGoogleTranslate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4151D4D71F65290F00702202 /* ROGoogleTranslate.framework */; };
 		4151D4DA1F652FBA00702202 /* LanguagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151D4D91F652FBA00702202 /* LanguagePickerViewController.swift */; };
 		416530ED1F682E660014FE15 /* SLLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416530EC1F682E660014FE15 /* SLLanguages.swift */; };
+		416530EF1F683F460014FE15 /* SLLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416530EE1F683F460014FE15 /* SLLanguageManager.swift */; };
 		41C8252F1F64C5F500CDFAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */; };
 		41C825341F64C5F500CDFAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C825321F64C5F500CDFAEC /* Main.storyboard */; };
 		41C825361F64C5F500CDFAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C825351F64C5F500CDFAEC /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		4151D4D71F65290F00702202 /* ROGoogleTranslate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROGoogleTranslate.framework; path = "../../Library/Developer/Xcode/DerivedData/snaplingua-ios-bfmxmyzvdhbpqqarnjxppxsjnfvw/Build/Products/Debug-iphoneos/ROGoogleTranslate/ROGoogleTranslate.framework"; sourceTree = "<group>"; };
 		4151D4D91F652FBA00702202 /* LanguagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePickerViewController.swift; sourceTree = "<group>"; };
 		416530EC1F682E660014FE15 /* SLLanguages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SLLanguages.swift; path = ../Managers/SLLanguages.swift; sourceTree = "<group>"; };
+		416530EE1F683F460014FE15 /* SLLanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLanguageManager.swift; sourceTree = "<group>"; };
 		41C8252B1F64C5F500CDFAEC /* snaplingua-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "snaplingua-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C825331F64C5F500CDFAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				41C8254A1F64CDFF00CDFAEC /* GVRequestManager.swift */,
 				41333D5B1F6510920077645F /* SLUserDefaultsManager.swift */,
+				416530EE1F683F460014FE15 /* SLLanguageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				41C825441F64C62800CDFAEC /* SLNotifications.swift in Sources */,
 				41333D5C1F6510920077645F /* SLUserDefaultsManager.swift in Sources */,
 				41C8252F1F64C5F500CDFAEC /* AppDelegate.swift in Sources */,
+				416530EF1F683F460014FE15 /* SLLanguageManager.swift in Sources */,
 				41C8254B1F64CDFF00CDFAEC /* GVRequestManager.swift in Sources */,
 				41C825431F64C62800CDFAEC /* SLLogging.swift in Sources */,
 			);

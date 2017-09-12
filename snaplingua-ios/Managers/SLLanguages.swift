@@ -6,7 +6,7 @@
 //  Copyright © 2017 SnapLingua. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct LanguageNames {
   static let Arabic       = "Arabic"
@@ -133,7 +133,6 @@ func getFlagForLanguage(languageName: String) -> String {
   }
   return flag
 }
-
 
 
 
