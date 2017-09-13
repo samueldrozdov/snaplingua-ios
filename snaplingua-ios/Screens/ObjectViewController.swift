@@ -22,7 +22,7 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
     
     snapButton.layer.cornerRadius = snapButton.bounds.width / 2
     snapButton.layer.shadowColor = UIColor.black.cgColor
-    snapButton.layer.shadowOpacity = 0.3
+    snapButton.layer.shadowOpacity = 0.25
     snapButton.layer.shadowRadius = snapButton.bounds.width / 2
     snapButton.layer.shadowPath = UIBezierPath(rect: snapButton.bounds).cgPath
         

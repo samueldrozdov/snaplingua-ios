@@ -13,7 +13,6 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   
   @IBOutlet weak var captureButton: UIButton!
   @IBOutlet weak var previewView: UIView!
-  @IBOutlet weak var focusAreaView: UIView!
   @IBOutlet weak var captureActivityIndicatorBackground: UIView!
   @IBOutlet weak var captureActivityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var selectObjectViewContainer: UIView!
@@ -39,10 +38,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     captureButton.layer.cornerRadius = captureButton.bounds.width / 2
     captureButton.layer.borderWidth = 4
     captureButton.layer.borderColor = UIColor.white.cgColor
-    
-    focusAreaView.layer.borderWidth = 1
-    focusAreaView.layer.borderColor = UIColor.init(white: 1.0, alpha: 0.3).cgColor
-        
+
     selectObjectViewContainer.layer.cornerRadius = 8
     selectObjectViewControllerBottom.constant = -selectObjectViewContainer.bounds.height
     
@@ -50,16 +46,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     
     self.selectObjectTableView.delegate = self
     
-    SLCameraManager.shared.didUserGrantCameraPermission(completion: { (granted) in
-      DispatchQueue.main.async {
-        if granted {
-          self.enableCamera()
-        } else {
-          let alert = SLCameraManager.shared.getCameraDeniedAlert()
-          self.present(alert, animated: true, completion: nil)
-        }
-      }
-    })
+    self.checkCamera()
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -75,43 +62,33 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   }
   
   func hideSelectObjectView() {
-    DispatchQueue.main.async {
-      self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
-      UIView.animate(withDuration: 0.3, animations: {
-        self.selectObjectViewContainer.layoutIfNeeded()
-      }) { (true) in
-      }
-    }
+    self.selectObjectViewControllerBottom.constant = -self.selectObjectViewContainer.bounds.height
+    UIView.animate(withDuration: 0.3, animations: {
+      self.selectObjectViewContainer.layoutIfNeeded()
+    })
   }
   
   func showSelectObjectView() {
-    DispatchQueue.main.async {
-      self.selectObjectViewControllerBottom.constant = -8
-      UIView.animate(withDuration: 0.3, animations: {
-        self.selectObjectViewContainer.layoutIfNeeded()
-      }) { (true) in
-      }
-    }
+    self.selectObjectViewControllerBottom.constant = -8
+    UIView.animate(withDuration: 0.3, animations: {
+      self.selectObjectViewContainer.layoutIfNeeded()
+    })
   }
   
   func startCaptureAnimation() {
     UIView.animate(withDuration: 0.3, animations: {
       self.captureButton.layer.opacity = 0
-      self.focusAreaView.layer.opacity = 0
       self.captureActivityIndicatorBackground.layer.opacity = 1
-    }) { (true) in
       self.captureActivityIndicator.startAnimating()
-    }
+    })
   }
   
   func endCaptureAnimation() {
     UIView.animate(withDuration: 0.3, animations: {
       self.captureButton.layer.opacity = 1
-      self.focusAreaView.layer.opacity = 1
       self.captureActivityIndicatorBackground.layer.opacity = 0
-    }) { (true) in
       self.captureActivityIndicator.stopAnimating()
-    }
+    })
   }
   
   @IBAction func pressedCancelButton(_ sender: UIButton) {
@@ -134,11 +111,11 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     
     if responseStatus == GVImageResponseStatus.RequestSucceededButUncertainLabels {
       let alert = UIAlertController(title: "Couldn't Identify Object", message: "Please take another photo.", preferredStyle: UIAlertControllerStyle.alert)
-      alert.show(self, sender: self)
+      self.present(alert, animated: true, completion: nil)
     }
     else if responseStatus == GVImageResponseStatus.RequestFailed {
       let alert = UIAlertController(title: "Request Failed", message: "Please check you internet connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
-      alert.show(self, sender: self)
+      self.present(alert, animated: true, completion: nil)
     }
     else if responseStatus == GVImageResponseStatus.RequestSucceeded {
       capturedLabels = labels
@@ -180,6 +157,19 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     self.capturedImage(image: image!)
   }
   
+  func checkCamera() {
+    SLCameraManager.shared.didUserGrantCameraPermission(completion: { (granted) in
+      DispatchQueue.main.async {
+        if granted {
+          self.enableCamera()
+        } else {
+          let alert = SLCameraManager.shared.getCameraDeniedAlert()
+          self.present(alert, animated: true, completion: nil)
+        }
+      }
+    })
+  }
+  
   func enableCamera() {
     let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
     
@@ -200,8 +190,7 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
       previewView.layer.insertSublayer(videoPreviewLayer!, at: 0)
       
       captureSession?.startRunning()
-    }
-    catch {
+    } catch {
       print(error)
     }
   }

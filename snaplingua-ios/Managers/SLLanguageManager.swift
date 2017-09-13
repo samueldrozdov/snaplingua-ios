@@ -51,17 +51,19 @@ final class SLLanguageManager: NSObject {
     let translator = ROGoogleTranslate()
     translator.apiKey = GV_IMAGE_API_KEY
     
-    let params = ROGoogleTranslateParams(source: source,
-                                         target: target,
-                                         text: text)
-    
+    let params = ROGoogleTranslateParams(source: getGoogleCodeForLanguage(languageName: source),
+                                         target: getGoogleCodeForLanguage(languageName: target),
+                                         text: text)    
     translator.translate(params: params) { (result) in
       completion(result)
     }
   }
   
   func getTranslationForActive(forString text: String, completion: @escaping (_ result: String) -> Void) {
-    getTranslation(forString: text, fromLanguage: SLLanguageManager.shared.getSourceLanguage(), toLanguage: SLLanguageManager.shared.getTargetLanguage(), completion: { (result) in
+    getTranslation(forString: text,
+                   fromLanguage: SLLanguageManager.shared.getSourceLanguage(),
+                   toLanguage: SLLanguageManager.shared.getTargetLanguage(),
+                   completion: { (result) in
       completion(result)
     })
   }

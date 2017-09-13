@@ -66,6 +66,12 @@ let languageDictionary = [
     "appleCode" : "he-IL",
     "flag" : "🇮🇳"
   ],
+  "English": [
+    "name" : "English",
+    "googleCode" : "en",
+    "appleCode" : "en",
+    "flag" : "🇺🇸"
+  ],
   "Japanese": [
     "name" : "Japanese",
     "googleCode" : "ja",
