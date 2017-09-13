@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		41333D5A1F64DF4F0077645F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41333D591F64DF4F0077645F /* SwiftyJSON.framework */; };
 		41333D5C1F6510920077645F /* SLUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41333D5B1F6510920077645F /* SLUserDefaultsManager.swift */; };
-		4151D4D61F651ADD00702202 /* ObjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151D4D51F651ADD00702202 /* ObjectDetailViewController.swift */; };
 		4151D4D81F65290F00702202 /* ROGoogleTranslate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4151D4D71F65290F00702202 /* ROGoogleTranslate.framework */; };
-		4151D4DA1F652FBA00702202 /* LanguagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151D4D91F652FBA00702202 /* LanguagePickerViewController.swift */; };
 		416530ED1F682E660014FE15 /* SLLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416530EC1F682E660014FE15 /* SLLanguages.swift */; };
 		416530EF1F683F460014FE15 /* SLLanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416530EE1F683F460014FE15 /* SLLanguageManager.swift */; };
 		416530F11F68A0EC0014FE15 /* SLCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416530F01F68A0EC0014FE15 /* SLCameraManager.swift */; };
@@ -21,18 +19,18 @@
 		41C825391F64C5F500CDFAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C825371F64C5F500CDFAEC /* LaunchScreen.storyboard */; };
 		41C825431F64C62800CDFAEC /* SLLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825411F64C62800CDFAEC /* SLLogging.swift */; };
 		41C825441F64C62800CDFAEC /* SLNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825421F64C62800CDFAEC /* SLNotifications.swift */; };
-		41C825461F64C79900CDFAEC /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825451F64C79900CDFAEC /* ObjectViewController.swift */; };
-		41C825481F64CC7600CDFAEC /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C825471F64CC7600CDFAEC /* SnapViewController.swift */; };
 		41C8254B1F64CDFF00CDFAEC /* GVRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8254A1F64CDFF00CDFAEC /* GVRequestManager.swift */; };
+		41F43BD61F68D3B700C10B1D /* LanguagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD21F68D3B700C10B1D /* LanguagePickerViewController.swift */; };
+		41F43BD71F68D3B700C10B1D /* ObjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD31F68D3B700C10B1D /* ObjectDetailViewController.swift */; };
+		41F43BD81F68D3B700C10B1D /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD41F68D3B700C10B1D /* ObjectViewController.swift */; };
+		41F43BD91F68D3B700C10B1D /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD51F68D3B700C10B1D /* SnapViewController.swift */; };
 		8596D88D4F7F0837ED32C2E8 /* Pods_snaplingua_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41333D591F64DF4F0077645F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/snaplingua-ios-bfmxmyzvdhbpqqarnjxppxsjnfvw/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		41333D5B1F6510920077645F /* SLUserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLUserDefaultsManager.swift; sourceTree = "<group>"; };
-		4151D4D51F651ADD00702202 /* ObjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDetailViewController.swift; sourceTree = "<group>"; };
 		4151D4D71F65290F00702202 /* ROGoogleTranslate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROGoogleTranslate.framework; path = "../../Library/Developer/Xcode/DerivedData/snaplingua-ios-bfmxmyzvdhbpqqarnjxppxsjnfvw/Build/Products/Debug-iphoneos/ROGoogleTranslate/ROGoogleTranslate.framework"; sourceTree = "<group>"; };
-		4151D4D91F652FBA00702202 /* LanguagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePickerViewController.swift; sourceTree = "<group>"; };
 		416530EC1F682E660014FE15 /* SLLanguages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SLLanguages.swift; path = ../Managers/SLLanguages.swift; sourceTree = "<group>"; };
 		416530EE1F683F460014FE15 /* SLLanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLanguageManager.swift; sourceTree = "<group>"; };
 		416530F01F68A0EC0014FE15 /* SLCameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCameraManager.swift; sourceTree = "<group>"; };
@@ -44,9 +42,11 @@
 		41C8253A1F64C5F500CDFAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41C825411F64C62800CDFAEC /* SLLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLogging.swift; sourceTree = "<group>"; };
 		41C825421F64C62800CDFAEC /* SLNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLNotifications.swift; sourceTree = "<group>"; };
-		41C825451F64C79900CDFAEC /* ObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
-		41C825471F64CC7600CDFAEC /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		41C8254A1F64CDFF00CDFAEC /* GVRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GVRequestManager.swift; sourceTree = "<group>"; };
+		41F43BD21F68D3B700C10B1D /* LanguagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePickerViewController.swift; sourceTree = "<group>"; };
+		41F43BD31F68D3B700C10B1D /* ObjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDetailViewController.swift; sourceTree = "<group>"; };
+		41F43BD41F68D3B700C10B1D /* ObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
+		41F43BD51F68D3B700C10B1D /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snaplingua_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77CC29634B946DE10D8AE9B /* Pods-snaplingua-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		D30FA217A0E8875322F9B878 /* Pods-snaplingua-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,10 +90,7 @@
 				41C8252E1F64C5F500CDFAEC /* AppDelegate.swift */,
 				41C825401F64C62800CDFAEC /* Utils */,
 				41C825491F64CDDE00CDFAEC /* Managers */,
-				41C825451F64C79900CDFAEC /* ObjectViewController.swift */,
-				41C825471F64CC7600CDFAEC /* SnapViewController.swift */,
-				4151D4D51F651ADD00702202 /* ObjectDetailViewController.swift */,
-				4151D4D91F652FBA00702202 /* LanguagePickerViewController.swift */,
+				41F43BD11F68D3B700C10B1D /* Screens */,
 				41C825321F64C5F500CDFAEC /* Main.storyboard */,
 				41C825351F64C5F500CDFAEC /* Assets.xcassets */,
 				41C825371F64C5F500CDFAEC /* LaunchScreen.storyboard */,
@@ -121,6 +118,17 @@
 				416530F01F68A0EC0014FE15 /* SLCameraManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		41F43BD11F68D3B700C10B1D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				41F43BD21F68D3B700C10B1D /* LanguagePickerViewController.swift */,
+				41F43BD31F68D3B700C10B1D /* ObjectDetailViewController.swift */,
+				41F43BD41F68D3B700C10B1D /* ObjectViewController.swift */,
+				41F43BD51F68D3B700C10B1D /* SnapViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		84439E6917D6E56524FD5772 /* Pods */ = {
@@ -274,15 +282,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4151D4DA1F652FBA00702202 /* LanguagePickerViewController.swift in Sources */,
-				4151D4D61F651ADD00702202 /* ObjectDetailViewController.swift in Sources */,
 				416530ED1F682E660014FE15 /* SLLanguages.swift in Sources */,
-				41C825481F64CC7600CDFAEC /* SnapViewController.swift in Sources */,
-				41C825461F64C79900CDFAEC /* ObjectViewController.swift in Sources */,
+				41F43BD91F68D3B700C10B1D /* SnapViewController.swift in Sources */,
+				41F43BD61F68D3B700C10B1D /* LanguagePickerViewController.swift in Sources */,
+				41F43BD71F68D3B700C10B1D /* ObjectDetailViewController.swift in Sources */,
 				41C825441F64C62800CDFAEC /* SLNotifications.swift in Sources */,
 				41333D5C1F6510920077645F /* SLUserDefaultsManager.swift in Sources */,
 				41C8252F1F64C5F500CDFAEC /* AppDelegate.swift in Sources */,
 				416530F11F68A0EC0014FE15 /* SLCameraManager.swift in Sources */,
+				41F43BD81F68D3B700C10B1D /* ObjectViewController.swift in Sources */,
 				416530EF1F683F460014FE15 /* SLLanguageManager.swift in Sources */,
 				41C8254B1F64CDFF00CDFAEC /* GVRequestManager.swift in Sources */,
 				41C825431F64C62800CDFAEC /* SLLogging.swift in Sources */,
