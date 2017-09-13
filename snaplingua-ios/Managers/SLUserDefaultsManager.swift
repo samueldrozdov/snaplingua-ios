@@ -13,6 +13,10 @@ struct UserDefaultKeys {
     static let Source = "kLanguageSource"
     static let Target = "kLanguageTarget"
   }
+  
+  struct Camera {
+    static let Requested = "kCameraRequested"
+  }
 }
 
 let WORDS_KEY = "wordsKeys"

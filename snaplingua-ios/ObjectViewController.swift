@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ROGoogleTranslate
 
 class ObjectViewController: UIViewController, UITableViewDelegate {
   
@@ -28,7 +27,6 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
     snapButton.layer.shadowPath = UIBezierPath(rect: snapButton.bounds).cgPath
         
     self.objectListTableView.delegate = self
-    
   }
   
   override func viewWillAppear(_ animated: Bool) {

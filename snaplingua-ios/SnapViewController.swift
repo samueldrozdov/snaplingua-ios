@@ -50,7 +50,16 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     
     self.selectObjectTableView.delegate = self
     
-    self.enableCamera()
+    SLCameraManager.shared.didUserGrantCameraPermission(completion: { (granted) in
+      DispatchQueue.main.async {
+        if granted {
+          self.enableCamera()
+        } else {
+          let alert = SLCameraManager.shared.getCameraDeniedAlert()
+          self.present(alert, animated: true, completion: nil)
+        }
+      }
+    })
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
