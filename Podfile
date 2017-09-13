@@ -8,5 +8,6 @@ target 'snaplingua-ios' do
   # Pods for snaplingua-ios
   pod 'SwiftyJSON', ‘3.1.4’
   pod 'ROGoogleTranslate'
+  pod 'Hero'
 
 end

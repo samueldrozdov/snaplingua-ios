@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Hero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-snaplingua-ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>66CDACB61995FF02A1F57DAAF628CE72</key>
+		<key>4A3E211676B243619B026D147D272253</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0B7A0C3222B2381FB9DD912F923792A</key>
+		<key>4DED16A6FC47E324DC620EC2570BCD0A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EFD39273EA35FFA2567243B8AF01FDA1</key>
+		<key>87B3806CA6C498E8A3E939D6CA1C4984</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A495EC6D3540D02958C7FD5CF490FA36</key>
 		<dict>
 			<key>primary</key>
 			<true/>

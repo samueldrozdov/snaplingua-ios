@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '66CDACB61995FF02A1F57DAAF628CE72'
+               BlueprintIdentifier = '87B3806CA6C498E8A3E939D6CA1C4984'
                BlueprintName = 'ROGoogleTranslate'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ROGoogleTranslate.framework'>

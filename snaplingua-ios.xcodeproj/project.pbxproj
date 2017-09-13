@@ -24,6 +24,7 @@
 		41F43BD71F68D3B700C10B1D /* ObjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD31F68D3B700C10B1D /* ObjectDetailViewController.swift */; };
 		41F43BD81F68D3B700C10B1D /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD41F68D3B700C10B1D /* ObjectViewController.swift */; };
 		41F43BD91F68D3B700C10B1D /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD51F68D3B700C10B1D /* SnapViewController.swift */; };
+		41F43BDB1F68DD6000C10B1D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 41F43BDA1F68DD6000C10B1D /* Podfile */; };
 		8596D88D4F7F0837ED32C2E8 /* Pods_snaplingua_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		41F43BD31F68D3B700C10B1D /* ObjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDetailViewController.swift; sourceTree = "<group>"; };
 		41F43BD41F68D3B700C10B1D /* ObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 		41F43BD51F68D3B700C10B1D /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
+		41F43BDA1F68DD6000C10B1D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snaplingua_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77CC29634B946DE10D8AE9B /* Pods-snaplingua-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		D30FA217A0E8875322F9B878 /* Pods-snaplingua-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				41C825351F64C5F500CDFAEC /* Assets.xcassets */,
 				41C825371F64C5F500CDFAEC /* LaunchScreen.storyboard */,
 				41C8253A1F64C5F500CDFAEC /* Info.plist */,
+				41F43BDA1F68DD6000C10B1D /* Podfile */,
 			);
 			path = "snaplingua-ios";
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				41C825391F64C5F500CDFAEC /* LaunchScreen.storyboard in Resources */,
 				41C825361F64C5F500CDFAEC /* Assets.xcassets in Resources */,
+				41F43BDB1F68DD6000C10B1D /* Podfile in Resources */,
 				41C825341F64C5F500CDFAEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,11 +251,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/ROGoogleTranslate/ROGoogleTranslate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ROGoogleTranslate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
