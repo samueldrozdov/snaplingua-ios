@@ -147,7 +147,7 @@
                     <connections>
                         <outlet property="objectListTableView" destination="ZqU-5r-ZY4" id="Sk7-G9-k9X"/>
                         <outlet property="snapButton" destination="KfX-4g-ltq" id="D8x-By-SWw"/>
-                        <segue destination="7JV-ji-OLs" kind="show" identifier="ShowObjectDetail" id="HPD-lQ-mGj"/>
+                        <segue destination="7JV-ji-OLs" kind="show" identifier="ShowObjectDetail" id="GFF-e3-zv2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAx-Pa-abB" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Hero
 
 class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCImageRequestManagerDelegate, UITableViewDelegate {
   
@@ -29,6 +30,9 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    previewView.heroID = "snapButton"
+    isHeroEnabled = true
     
     imageRequestManager = GVImageRequestManager()
     imageRequestManager?.delegate = self
@@ -111,10 +115,12 @@ class SnapViewController: UIViewController, AVCapturePhotoCaptureDelegate, GCIma
     
     if responseStatus == GVImageResponseStatus.RequestSucceededButUncertainLabels {
       let alert = UIAlertController(title: "Couldn't Identify Object", message: "Please take another photo.", preferredStyle: UIAlertControllerStyle.alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default))
       self.present(alert, animated: true, completion: nil)
     }
     else if responseStatus == GVImageResponseStatus.RequestFailed {
       let alert = UIAlertController(title: "Request Failed", message: "Please check you internet connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default))
       self.present(alert, animated: true, completion: nil)
     }
     else if responseStatus == GVImageResponseStatus.RequestSucceeded {

@@ -18,7 +18,7 @@ class ObjectDetailViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.wordImageView.image = wordImage
+    wordImageView.image = wordImage
   }
   
   @IBAction func pressedListen(_ sender: Any) {

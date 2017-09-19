@@ -53,9 +53,14 @@ final class SLLanguageManager: NSObject {
     
     let params = ROGoogleTranslateParams(source: getGoogleCodeForLanguage(languageName: source),
                                          target: getGoogleCodeForLanguage(languageName: target),
-                                         text: text)    
+                                         text: text)
+    var completed = false
     translator.translate(params: params) { (result) in
+      completed = true
       completion(result)
+    }
+    if completed == false {
+      completion("")
     }
   }
   

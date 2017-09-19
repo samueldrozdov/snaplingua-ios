@@ -16,6 +16,7 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
   var selectedWord: String = ""
   var selectedWordOrig: String = ""
   var selectedImage: UIImage = UIImage()
+  var selectedIndexPath: IndexPath = IndexPath()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,7 +26,7 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
     snapButton.layer.shadowOpacity = 0.25
     snapButton.layer.shadowRadius = snapButton.bounds.width / 2
     snapButton.layer.shadowPath = UIBezierPath(rect: snapButton.bounds).cgPath
-        
+    
     self.objectListTableView.delegate = self
   }
   
@@ -48,15 +49,28 @@ class ObjectViewController: UIViewController, UITableViewDelegate {
     let cell: ObjectTableViewCell = objectListTableView.cellForRow(at: indexPath) as! ObjectTableViewCell
     selectedImage = cell.wordImageView.image!
     selectedWord = cell.wordLabel.text!
+    selectedIndexPath = indexPath
     
     let word = objectListTableView.words[indexPath.row] as! NSDictionary
     selectedWordOrig = (word["word"] as? String)!
-    DLog(message: selectedWordOrig)
     performSegue(withIdentifier: "ShowObjectDetail", sender: nil)
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 150
+    return 140
+  }
+  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    
+    if tableView == objectListTableView {
+      if objectListTableView.showedTranslationFailedAlert == false && objectListTableView.translationFailed {
+        objectListTableView.showedTranslationFailedAlert = true
+        
+        let alert = UIAlertController(title: "Translation Failed", message: "Please check you internet connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+      }
+    }
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,6 +97,9 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
   
   var words = NSArray()
   
+  var translationFailed = false
+  var showedTranslationFailedAlert = false
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
@@ -92,11 +109,19 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     self.separatorInset = .zero
     
     self.reload()
+    
+    self.refreshControl = UIRefreshControl()
+    self.refreshControl?.attributedTitle = NSAttributedString(string: "")
+    self.refreshControl?.addTarget(self, action: #selector(self.reload), for: UIControlEvents.valueChanged)
+    self.addSubview(self.refreshControl!)
   }
   
   func reload() {
+    translationFailed = false
+    showedTranslationFailedAlert = false
     words = SLUserDefaultsManager.shared.getPreviousWords()
     self.reloadData()
+    self.refreshControl?.endRefreshing()
   }
   
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -121,17 +146,21 @@ class ObjectListTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     let word = words[indexPath.row] as! NSDictionary
     
     cell.wordImageView?.image = UIImage(data:(word["image"] as! Data), scale:1.0)
-    SLLanguageManager.shared.getTranslationForActive(forString: (word["word"] as! String)) { (result) in
-      DispatchQueue.main.async {
-        cell.wordLabel?.text = result
+    
+    let wordText = word["word"] as! String
+    cell.wordLabel?.text = wordText
+    SLLanguageManager.shared.getTranslationForActive(forString:wordText) { (result) in
+      if result == "" {
+        self.translationFailed = true
+      }
+      else {
+        DispatchQueue.main.async {
+          cell.wordLabel?.text = result
+        }
       }
     }
     
     return cell
-  }
-  
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 120
   }
 }
 
@@ -142,5 +171,6 @@ class ObjectTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
+    wordLabel.text = ""
   }
 }

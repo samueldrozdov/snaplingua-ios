@@ -10,7 +10,9 @@ import UIKit
 import SwiftyJSON
 
 let GV_IMAGE_URL = "https://vision.googleapis.com/v1/images:annotate"
-let GV_IMAGE_API_KEY = "AIzaSyD_0DuvH0KK7lobg269P76uL2bQsiw-wLI"
+
+let PRIVATE_KEY_PATH = Bundle.main.path(forResource: "PrivateKeys", ofType: "plist")
+let GV_IMAGE_API_KEY = NSDictionary(contentsOfFile: PRIVATE_KEY_PATH!)?["GOOGLE_API_KEY"] as! String
 
 struct GVImageResponseStatus {
   static let RequestSucceeded                     = "RequestSucceeded"
@@ -25,7 +27,7 @@ protocol GCImageRequestManagerDelegate: class {
 class GVImageRequestManager: NSObject {
 
   weak var delegate: GCImageRequestManagerDelegate?
-  
+    
   func resizeImage(_ imageSize: CGSize, image: UIImage) -> Data {
     UIGraphicsBeginImageContext(imageSize)
     image.draw(in: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))

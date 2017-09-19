@@ -25,6 +25,8 @@
 		41F43BD81F68D3B700C10B1D /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD41F68D3B700C10B1D /* ObjectViewController.swift */; };
 		41F43BD91F68D3B700C10B1D /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F43BD51F68D3B700C10B1D /* SnapViewController.swift */; };
 		41F43BDB1F68DD6000C10B1D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 41F43BDA1F68DD6000C10B1D /* Podfile */; };
+		41F43BDD1F68DDF200C10B1D /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F43BDC1F68DDF200C10B1D /* Hero.framework */; };
+		41FF1EB91F718E3B000A1786 /* PrivateKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41FF1EB81F718E3B000A1786 /* PrivateKeys.plist */; };
 		8596D88D4F7F0837ED32C2E8 /* Pods_snaplingua_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		41F43BD41F68D3B700C10B1D /* ObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 		41F43BD51F68D3B700C10B1D /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		41F43BDA1F68DD6000C10B1D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		41F43BDC1F68DDF200C10B1D /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = "../../Library/Developer/Xcode/DerivedData/snaplingua-ios-bfmxmyzvdhbpqqarnjxppxsjnfvw/Build/Products/Debug-iphoneos/Hero/Hero.framework"; sourceTree = "<group>"; };
+		41FF1EB81F718E3B000A1786 /* PrivateKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrivateKeys.plist; sourceTree = "<group>"; };
 		4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snaplingua_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77CC29634B946DE10D8AE9B /* Pods-snaplingua-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		D30FA217A0E8875322F9B878 /* Pods-snaplingua-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snaplingua-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-snaplingua-ios/Pods-snaplingua-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F43BDD1F68DDF200C10B1D /* Hero.framework in Frameworks */,
 				4151D4D81F65290F00702202 /* ROGoogleTranslate.framework in Frameworks */,
 				41333D5A1F64DF4F0077645F /* SwiftyJSON.framework in Frameworks */,
 				8596D88D4F7F0837ED32C2E8 /* Pods_snaplingua_ios.framework in Frameworks */,
@@ -97,6 +102,7 @@
 				41C825351F64C5F500CDFAEC /* Assets.xcassets */,
 				41C825371F64C5F500CDFAEC /* LaunchScreen.storyboard */,
 				41C8253A1F64C5F500CDFAEC /* Info.plist */,
+				41FF1EB81F718E3B000A1786 /* PrivateKeys.plist */,
 				41F43BDA1F68DD6000C10B1D /* Podfile */,
 			);
 			path = "snaplingua-ios";
@@ -146,6 +152,7 @@
 		C6D2BC3DE9AA05F4FBD7845A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41F43BDC1F68DDF200C10B1D /* Hero.framework */,
 				4151D4D71F65290F00702202 /* ROGoogleTranslate.framework */,
 				41333D591F64DF4F0077645F /* SwiftyJSON.framework */,
 				4AC1C875D9CB65079168E289 /* Pods_snaplingua_ios.framework */,
@@ -218,6 +225,7 @@
 			files = (
 				41C825391F64C5F500CDFAEC /* LaunchScreen.storyboard in Resources */,
 				41C825361F64C5F500CDFAEC /* Assets.xcassets in Resources */,
+				41FF1EB91F718E3B000A1786 /* PrivateKeys.plist in Resources */,
 				41F43BDB1F68DD6000C10B1D /* Podfile in Resources */,
 				41C825341F64C5F500CDFAEC /* Main.storyboard in Resources */,
 			);
